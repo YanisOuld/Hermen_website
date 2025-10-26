@@ -1,0 +1,63 @@
+/* ===== SOLUTION SECTION ===== */
+.solution__features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+}
+
+.feature__card {
+    text-align: center;
+    padding: var(--space-8);
+    background: var(--white);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-light);
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    transform: scaleX(0);
+    transition: transform var(--transition-normal);
+}
+
+.feature__card:hover::before {
+    transform: scaleX(1);
+}
+
+.feature__card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.feature__icon {
+    margin-bottom: var(--space-4);
+    display: block;
+    transition: transform var(--transition-bounce);
+    color: var(--primary);
+    font-size: 48px;
+}
+
+.feature__card:hover .feature__icon {
+    transform: scale(1.1);
+}
+
+.feature__title {
+    font-size: var(--text-xl);
+    font-weight: var(--font-semibold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-3);
+}
+
+.feature__description {
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+}

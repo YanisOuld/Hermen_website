@@ -1,0 +1,58 @@
+/* ===== LAYOUT SYSTEM ===== */
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.section {
+    padding: var(--space-14) 0;  /* Reduced from 20 to 14 */
+}
+
+.section--sm {
+    padding: var(--space-12) 0;  /* Reduced from 16 to 12 */
+}
+
+.section--lg {
+    padding: var(--space-18) 0;  /* Reduced from 24 to 18 */
+}
+
+.section--xl {
+    padding: var(--space-24) 0;  /* Reduced from 32 to 24 */
+}
+
+.section--alt {
+    background: var(--bg-secondary);
+}
+
+.section__header {
+    text-align: center;
+    margin-bottom: var(--space-12);  /* Reduced from 16 to 12 */
+}
+
+.section__title {
+    font-size: var(--text-4xl);
+    font-weight: var(--font-bold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-4);
+    position: relative;
+}
+
+.section__title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--bg-gradient-primary);
+    border-radius: var(--radius-sm);
+}
+
+.section__subtitle {
+    font-size: var(--text-xl);
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
