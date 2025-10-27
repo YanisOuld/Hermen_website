@@ -21,7 +21,24 @@
     font-size: var(--text-lg);
     color: var(--text-secondary);
     line-height: var(--leading-relaxed);
-    margin-bottom: var(--space-8);
+    margin-bottom: var(--space-6);
+}
+
+.contact__emphasis {
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+    font-style: italic;
+    margin-bottom: var(--space-12);
+    padding-left: var(--space-4);
+    border-left: 3px solid var(--primary);
+}
+
+.contact__emphasis strong {
+    font-style: normal;
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: var(--space-2);
 }
 
 .contact__details {
