@@ -35,11 +35,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function animateCounter(element) {
         const originalText = element.textContent;
-        const target = parseInt(originalText.replace(/\D/g, ''));
         
         // Skip animation for asterisk values
         if (originalText.includes('*')) {
             return;
+        }
+        
+        // Handle ranges like "3-5" - extract first number
+        let target, suffix = '';
+        if (originalText.includes('-')) {
+            const rangeMatch = originalText.match(/(\d+)-(\d+)(.*)/);
+            if (rangeMatch) {
+                target = parseInt(rangeMatch[1]);
+                suffix = originalText.replace(/\d+-/, '');
+            } else {
+                return;
+            }
+        } else {
+            target = parseInt(originalText.replace(/\D/g, ''));
+            suffix = originalText.replace(/\d+/, '');
         }
         
         const duration = 2000;
@@ -53,16 +67,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 clearInterval(timer);
             }
             
-            // Preserve original formatting (+ symbol, % symbol, etc.)
-            let formatted;
-            if (originalText.includes('%')) {
-                formatted = Math.floor(current) + '%';
-            } else if (originalText.includes('+')) {
-                formatted = Math.floor(current) + '+';
-            } else {
-                formatted = Math.floor(current);
-            }
-            
+            // Preserve original formatting
+            const formatted = Math.floor(current) + suffix;
             element.textContent = formatted;
         }, 16);
     }

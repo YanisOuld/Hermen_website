@@ -37,7 +37,28 @@
     font-size: var(--text-xl);
     color: rgba(255, 255, 255, 0.9);
     line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-6);
+}
+
+.pilot__emphasis {
+    font-size: var(--text-lg);
+    color: rgba(255, 255, 255, 0.95);
+    line-height: var(--leading-relaxed);
     margin-bottom: var(--space-8);
+    padding: var(--space-6);
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid var(--accent);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(10px);
+}
+
+.pilot__emphasis strong {
+    display: block;
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+    color: var(--white);
+    margin-bottom: var(--space-3);
+    font-style: normal;
 }
 
 .pilot__benefits {
