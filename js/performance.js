@@ -7,5 +7,5 @@ document.addEventListener('DOMContentLoaded', function() {
     preloadLink.as = 'style';
     document.head.appendChild(preloadLink);
 
-    console.log('Hermèn website loaded successfully! 🚀');
+    console.log('Chronher website loaded successfully!');
 });
