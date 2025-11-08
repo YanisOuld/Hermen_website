@@ -6,13 +6,13 @@ const EMAILJS_CONFIG = {
     PUBLIC_KEY: 'PLSIPnltfGzi9O5b1',
     
     // Votre Service ID EmailJS
-    SERVICE_ID: 'service_tqso6s6',
+    SERVICE_ID: 'service_0znukgc',
     
     // Votre Template ID EmailJS
     TEMPLATE_ID: 'template_i1wd6mn',
     
     // Email de destination
-    TO_EMAIL: 'ouldmayanis@gmail.com'
+    TO_EMAIL: 'pilot@chronhr.com'
 };
 
 // Initialiser EmailJS
