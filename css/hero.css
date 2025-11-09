@@ -35,6 +35,16 @@
     max-width: 540px;
 }
 
+.hero__eyebrow {
+    display: inline-block;
+    font-size: var(--text-sm);
+    letter-spacing: 0.08em;
+    font-weight: var(--font-semibold);
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: var(--space-4);
+}
+
 .hero__title {
     font-size: clamp(2.5rem, 4vw, var(--text-6xl));
     font-weight: var(--font-extrabold);
@@ -79,6 +89,7 @@
     flex-wrap: wrap;
     gap: var(--space-3);
     align-items: center;
+    margin-top: var(--space-4);
 }
 
 .hero__visual {
