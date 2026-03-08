@@ -1,0 +1,44 @@
+/* HOW IT WORKS */
+.how {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 64px 52px;
+}
+
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.how-item {
+  padding-right: 48px;
+  margin-right: 48px;
+  border-right: 1px solid var(--border);
+}
+
+.how-item:last-child {
+  border-right: none;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.how-num {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.how-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.how-desc {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--muted);
+}

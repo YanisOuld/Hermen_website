@@ -1,0 +1,125 @@
+/* HERO */
+.hero {
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-top {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 148px 52px 56px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  /* align both columns to the top so the short right-hand panel doesn’t leave
+     an awkward gap above the paragraph */
+  align-items: start;
+}
+
+/* mobile: collapse to single column like other sections */
+@media (max-width: 640px) {
+  .hero-top {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* make right‑column paragraph fill full height when possible */
+.hero-top > div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-eyebrow {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 4.2vw, 4.4rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  /* ensure heading spans full column, not restricted by content width */
+  width: 100%;
+}
+
+h1 em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--muted);
+}
+
+.hero-body {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--muted);
+  margin-bottom: 32px;
+  max-width: 360px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* improve buttons in hero section */
+.hero-actions .btn-primary {
+  padding: 12px 32px;
+  font-size: 0.95rem;
+  background: var(--ink);
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.hero-actions .btn-primary:hover {
+  background: #222;
+}
+
+.hero-actions .btn-text {
+  font-size: 0.95rem;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
+}
+.hero-actions .btn-text:hover {
+  text-decoration: underline;
+}
+
+.hero-bottom {
+  border-top: 1px solid var(--border);
+  padding: 0 52px;
+  display: flex;
+  max-width: 480px;
+}
+
+.hero-stat {
+  padding: 28px 40px 28px 0;
+  margin-right: 40px;
+  border-right: 1px solid var(--border);
+}
+
+.hero-stat:last-child {
+  border-right: none;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.hero-stat-num {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.hero-stat-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+}

@@ -1,0 +1,40 @@
+function SiteFooter() {
+  return (
+    <footer>
+      <div className="footer-inner">
+        <div className="footer-top">
+          <div>
+            <div className="footer-brand-name">CHRONHR</div>
+            <div className="footer-brand-desc">
+              AML intelligence platform for compliance analysts. Ingest, analyze, report.
+            </div>
+          </div>
+          <div>
+            <div className="footer-col-title">Links</div>
+            <ul className="footer-links">
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/team">Meet the team</a></li>
+              <li><a href="/get-started">Get started</a></li>
+              <li><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              <li><a href="https://www.nextai.com" target="_blank" rel="noopener noreferrer">NextAI</a></li>
+              <li><a href="https://propolys.com" target="_blank" rel="noopener noreferrer">Propolys</a></li>
+              <li><a href="mailto:hello@chronhr.com">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <div>© 2025 ChronHR Inc. · Montréal, Québec</div>
+          <div className="footer-legal">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Security</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  )
+}
+
+export default SiteFooter
+

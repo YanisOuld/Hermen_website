@@ -1,0 +1,129 @@
+/* SUPPORTED BY */
+.supported {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 72px 0;
+}
+
+.supported-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 52px;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.supported-top {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding-bottom: 56px;
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.supported-claim {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 0px;
+  border-right: 1px solid var(--border);
+  margin-right: 0px;
+}
+
+.scroll-track {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-track::before,
+.scroll-track::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.scroll-track::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg), transparent);
+}
+
+.scroll-track::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg), transparent);
+}
+
+.scroll-inner {
+  display: flex;
+  align-items: center;
+  gap: 72px;
+  width: max-content;
+  animation: scroll-left 18s linear infinite;
+}
+
+.scroll-inner:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.partner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.partner-logo {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-logo svg {
+  width: 14px;
+  height: 14px;
+  opacity: 0.35;
+}
+
+.partner-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  opacity: 0.3;
+  white-space: nowrap;
+}
+
+.partner-desc {
+  font-size: 0.72rem;
+  color: var(--muted);
+  opacity: 0.5;
+  white-space: nowrap;
+}
+
+.partner-sep {
+  font-size: 0.7rem;
+  color: var(--border);
+  flex-shrink: 0;
+}
