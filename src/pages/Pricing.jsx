@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import '../styles/pricing.css'
 import CtaBand from '../components/CtaBand'
+import Slider from '../components/Slider'
+import ResultItem from '../components/ResultItem'
 
 export default function Pricing() {
   // sliders state
@@ -122,36 +124,6 @@ export default function Pricing() {
 
       {/* reuse existing CtaBand for consistency */}
       <CtaBand />
-    </div>
-  )
-}
-
-function Slider({ label, value, min, max, unit, desc, onChange }) {
-  return (
-    <div className="slider-group">
-      <div className="slider-header">
-        <div className="slider-label">{label}</div>
-        <div className="slider-value">
-          {value} <span>{unit}</span>
-        </div>
-      </div>
-      <div className="slider-desc">{desc}</div>
-      <input
-        type="range"
-        min={min}
-        max={max}
-        value={value}
-        onChange={(e) => onChange(+e.target.value)}
-      />
-    </div>
-  )
-}
-
-function ResultItem({ name, value }) {
-  return (
-    <div className="result-item">
-      <div className="result-name">{name}</div>
-      <div className="result-val">{value}</div>
     </div>
   )
 }

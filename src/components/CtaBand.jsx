@@ -7,7 +7,7 @@ function CtaBand() {
           <br />
           <em>in action?</em>
         </div>
-        <a href="#" className="btn-primary">
+        <a href="/get-started" className="btn-primary">
           Book a demo
         </a>
       </div>
