@@ -32,6 +32,21 @@ h1 em {
   color: var(--muted);
 }
 
+/* decorative plus symbols used in team header */
+.plus-plus {
+  display: block;
+  font-size: 2.4rem;
+  color: var(--border);
+  opacity: 0.15;
+  margin-top: 8px;
+  line-height: 1;
+}
+
+/* additional spacing for second column in team header */
+.team-desc {
+  margin-top: 24px; /* give breathing room */
+}
+
 .header-subtitle {
   margin-top: 28px;
   font-size: 1rem;

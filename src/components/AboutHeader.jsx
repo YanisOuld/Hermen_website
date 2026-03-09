@@ -7,32 +7,30 @@ function AboutHeader() {
         <h1>
           One platform.
           <br />
-          <em>Every step of AML analysis.</em>
+          <em>for smarter AML work.</em>
         </h1>
 
         <p className="header-subtitle">
-          ChronHR helps analysts move faster from raw data to structured
-          investigation — without losing context.
+          Designed by analysts, ChronHR unites data, tools and reports in a
+          single workspace so you can focus on decisions instead of prep.
         </p>
       </div>
 
       <div className="page-mission">
         <p className="mission-intro">
-          AML analysts deserve better tools. ChronHR is built around one idea —
-          <strong> less preparation, more investigation.</strong>
+          Built for the analyst’s day‑to‑day: fewer clicks, fewer systems, more
+          insights.
         </p>
 
         <ul className="mission-list">
-          <li>Centralize all investigation data in one workspace</li>
-          <li>Automatically generate analysis tools for every case</li>
-          <li>Collaborate, annotate and track investigation decisions</li>
-          <li>Draft SAR reports without starting from scratch</li>
+          <li>One workspace for data, case notes and reports</li>
+          <li>Tools generated automatically as you work</li>
+          <li>Share findings and keep the audit trail intact</li>
         </ul>
 
         <p className="integration-note">
-          ChronHR integrates with existing compliance workflows and financial
-          systems — allowing teams to deploy quickly without replacing their
-          current infrastructure.
+          Plug in to your current compliance stack and start using ChronHR in
+          days, not months.
         </p>
       </div>
     </div>

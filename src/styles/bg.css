@@ -4,8 +4,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%; /* use percentage to avoid 100vw overflow */
+  height: 100%;
   pointer-events: none;
   overflow: hidden;
   background: #F7F6F2; /* fallback just in case */

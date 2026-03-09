@@ -1,7 +1,10 @@
+
 function Hero() {
   return (
     <div className="hero">
       <div className="hero-top">
+
+        {/* LEFT — title */}
         <div>
           <div className="hero-eyebrow">AML Intelligence Platform</div>
           <h1>
@@ -12,20 +15,35 @@ function Hero() {
             <em>Move faster.</em>
           </h1>
         </div>
-        <div>
+
+        {/* RIGHT — body + actions + stats */}
+        <div className="hero-right">
           <p className="hero-body">
-            ChronHR is an ELT platform built for AML analysts — centralizing data ingestion,
-            analysis tools and report writing in one focused workflow.
+            ChronHR is an ELT platform built specifically for AML analysts — bringing
+            data ingestion, analysis tools and report writing together in a single,
+            analyst‑focused workflow.
           </p>
+
           <div className="hero-actions">
-            <a href="#" className="btn-primary">
-              Book a demo
-            </a>
-            <a href="#how" className="btn-text">
-              How it works →
-            </a>
+            <a href="/get-started" className="btn-primary">Book a demo</a>
+            <a href="#how" className="btn-text">How it works →</a>
           </div>
+
+          {/* Stats — pinned below actions */}
+          <div className="hero-stats">
+            <div className="hero-stat">
+              <div className="hero-stat-num">2×</div>
+              <div className="hero-stat-label">Faster analysis</div>
+            </div>
+            <div className="hero-stat-divider" />
+            <div className="hero-stat">
+              <div className="hero-stat-num" style={{ fontSize: '2rem' }}>Effortless</div>
+              <div className="hero-stat-label">Implementation</div>
+            </div>
+          </div>
+
         </div>
+
       </div>
     </div>
   )
@@ -33,3 +51,139 @@ function Hero() {
 
 export default Hero
 
+
+/*
+── CSS ────────────────────────────────────────────────────────
+
+.hero {
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-top {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 148px 52px 72px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+@media (max-width: 640px) {
+  .hero-top { grid-template-columns: 1fr; }
+}
+
+.hero-eyebrow {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 4.2vw, 4.4rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  width: 100%;
+}
+
+h1 em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--muted);
+}
+
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+.hero-body {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--muted);
+  margin-bottom: 28px;
+  max-width: 360px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.hero-actions .btn-primary {
+  padding: 12px 28px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  background: var(--ink);
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+.hero-actions .btn-primary:hover { opacity: 0.75; }
+
+.hero-actions .btn-text {
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.hero-actions .btn-text:hover { color: var(--ink); }
+
+.hero-stats {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+
+.hero-stat {
+  flex: 1;
+}
+
+.hero-stat-num {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.hero-stat-label {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.hero-stat-divider {
+  width: 1px;
+  height: 36px;
+  background: var(--border);
+  margin: 0 32px;
+  flex-shrink: 0;
+}
+
+.hero-logo {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 80px;
+  opacity: 0.25;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-15px); }
+}
+
+*/

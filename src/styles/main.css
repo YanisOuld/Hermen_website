@@ -9,3 +9,8 @@
 @import './about.css';
 @import './getStarted.css';
 @import './footer.css';
+
+/* prevent sideways scroll from 100vw, etc. */
+html, body {
+  overflow-x: hidden;
+}
