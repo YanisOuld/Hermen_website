@@ -21,14 +21,25 @@ assist — the analyst decides.`,
   ]
 
   return (
-    <div className="why">
-      {items.map((item) => (
-        <div key={item.num} className="why-item">
-          <div className="why-num">{item.num}</div>
-          <div className="why-title">{item.title}</div>
-          <div className="why-desc">{item.desc}</div>
-        </div>
-      ))}
+    <div className="why-section">
+
+      <div className="why-header">
+        <div className="why-eyebrow">Why ChronHR</div>
+        <h2 className="why-title-main">
+          Built different.<br />
+          <em>By design.</em>
+        </h2>
+      </div>
+
+      <div className="why">
+        {items.map((item) => (
+          <div key={item.num} className="why-item">
+            <div className="why-title">{item.title}</div>
+            <div className="why-desc">{item.desc}</div>
+          </div>
+        ))}
+      </div>
+
     </div>
   )
 }

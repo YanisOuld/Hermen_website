@@ -8,8 +8,8 @@ export default function Pricing() {
   // sliders state
   const [analysts, setAnalysts] = useState(5)
   const [cases, setCases] = useState(20)
-  const [hours, setHours] = useState(6)
-  const [cost, setCost] = useState(85)
+  const [hours, setHours] = useState(1)
+  const [cost, setCost] = useState(45)
 
   // derived values
   const totalHours = analysts * cases * hours
@@ -76,7 +76,7 @@ export default function Pricing() {
               label="Cases per analyst / month"
               value={cases}
               min={5}
-              max={100}
+              max={200}
               unit="cases"
               desc="Average number of cases handled per analyst monthly"
               onChange={setCases}
@@ -84,8 +84,8 @@ export default function Pricing() {
             <Slider
               label="Hours per case (today)"
               value={hours}
-              min={2}
-              max={20}
+              min={0.5}
+              max={10}
               unit="h / case"
               desc="Average time to complete one full analysis today"
               onChange={setHours}

@@ -8,14 +8,12 @@ function Roles() {
         </h2>
         <div className="roles-grid">
           <div className="role-item">
-            <div className="role-num">01</div>
             <div className="role-title">AML Analysts</div>
             <div className="role-desc">
               Stop spending hours on manual data prep. Focus on what matters — the analysis itself.
             </div>
           </div>
           <div className="role-item">
-            <div className="role-num">02</div>
             <div className="role-title">Compliance Officers</div>
             <div className="role-desc">
               Full visibility on case progress, team throughput and regulatory deadlines — in one
@@ -23,7 +21,6 @@ function Roles() {
             </div>
           </div>
           <div className="role-item">
-            <div className="role-num">03</div>
             <div className="role-title">Reporting Teams</div>
             <div className="role-desc">
               Generate STRs and LCTRs that meet every FINTRAC requirement. No rework, no
@@ -31,7 +28,6 @@ function Roles() {
             </div>
           </div>
           <div className="role-item">
-            <div className="role-num">04</div>
             <div className="role-title">Risk &amp; Audit</div>
             <div className="role-desc">
               Full audit trail on every case and decision. Export-ready for internal reviews and

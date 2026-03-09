@@ -86,7 +86,6 @@ directly to FINTRAC. No blank page, no formatting errors.`,
         {steps.map((step) => (
           <div key={step.num} className="step">
             <div className="step-meta">
-              <div className="step-num">{step.num}</div>
               <div className="step-title">{step.title}</div>
             </div>
             <div className="step-content">

@@ -7,7 +7,6 @@ function HowItWorks() {
       </h2>
       <div className="how-grid">
         <div className="how-item">
-          <div className="how-num">01</div>
           <div className="how-title">Data Ingestion</div>
           <div className="how-desc">
             Centralize all your data sources in one place. Structured, normalized and ready for
@@ -15,7 +14,6 @@ function HowItWorks() {
           </div>
         </div>
         <div className="how-item">
-          <div className="how-num">02</div>
           <div className="how-title">Analysis</div>
           <div className="how-desc">
             Purpose-built tools to simplify and standardize your AML workflow. Less noise, more
@@ -23,7 +21,6 @@ function HowItWorks() {
           </div>
         </div>
         <div className="how-item">
-          <div className="how-num">03</div>
           <div className="how-title">Report Writing</div>
           <div className="how-desc">
             Assisted drafting for STRs, LCTRs and case files. Compliant, consistent and ready to
