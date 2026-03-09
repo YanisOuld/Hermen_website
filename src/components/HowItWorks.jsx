@@ -10,7 +10,7 @@ function HowItWorks() {
           <div className="how-title">Data Ingestion</div>
           <div className="how-desc">
             Centralize all your data sources in one place. Structured, normalized and ready for
-            analysis — no manual prep.
+            analysis. No manual prep.
           </div>
         </div>
         <div className="how-item">

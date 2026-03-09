@@ -3,20 +3,20 @@ function WhyDifferent() {
     {
       num: '01',
       title: 'ELT, not just a dashboard',
-      desc: `ChronHR doesn't just display data — it extracts, loads and transforms it into a
+      desc: `ChronHR doesn't just display data. It extracts, loads and transforms it into a
 structured analysis workspace tailored to each case.`,
     },
     {
       num: '02',
       title: 'Built for analysts, not IT',
       desc: `Every tool and interface is designed around how an AML analyst actually thinks and
-works — not around what's easiest to build.`,
+works and not around what's easiest to build.`,
     },
     {
       num: '03',
       title: 'Standardized, not rigid',
       desc: `ChronHR standardizes the workflow without replacing analyst judgment. The tools
-assist — the analyst decides.`,
+assist and the analyst decides.`,
     },
   ]
 

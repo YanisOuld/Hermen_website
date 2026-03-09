@@ -1,13 +1,10 @@
 import Nav from './components/Nav'
-import Hero from './components/Hero'
-import HowItWorks from './components/HowItWorks'
-import Roles from './components/Roles'
 import SiteFooter from './components/SiteFooter'
 import Team from './pages/Team'
 import About from './pages/About'
 import Home from './pages/Home'
 import GetStarted from './pages/GetStarted'
-import Pricing from './pages/Pricing'
+import Roi from './pages/Roi'
 import Background from './components/Background'
 
 function App() {
@@ -15,13 +12,13 @@ function App() {
   const pathname = window.location.pathname
   const isTeamPage = pathname === '/team'
   const isAboutPage = pathname === '/about'
-  const isPricingPage = pathname === '/pricing'
+  const isPricingPage = pathname === '/roi'
   const isGetStartedPage = pathname === '/get-started'
 
   let active = 'home'
   if (isAboutPage) active = 'about'
   else if (isTeamPage) active = 'team'
-  else if (isPricingPage) active = 'pricing'
+  else if (isPricingPage) active = 'roi'
   else if (isGetStartedPage) active = 'get-started'
 
   return (
@@ -36,7 +33,7 @@ function App() {
       ) : isAboutPage ? (
         <About />
       ) : isPricingPage ? (
-        <Pricing />
+        <Roi />
       ) : isGetStartedPage ? (
         <GetStarted />
       ) : (

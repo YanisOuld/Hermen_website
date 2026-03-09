@@ -10,13 +10,13 @@ function Roles() {
           <div className="role-item">
             <div className="role-title">AML Analysts</div>
             <div className="role-desc">
-              Stop spending hours on manual data prep. Focus on what matters — the analysis itself.
+              Stop spending hours on manual data prep. Focus on what matters, the analysis itself.
             </div>
           </div>
           <div className="role-item">
             <div className="role-title">Compliance Officers</div>
             <div className="role-desc">
-              Full visibility on case progress, team throughput and regulatory deadlines — in one
+              Full visibility on case progress, team throughput and regulatory deadlines, all in one
               view.
             </div>
           </div>

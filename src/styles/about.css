@@ -104,7 +104,6 @@ h1 em {
   font-style: italic;
 }
 
-/* WORKFLOW SECTION */
 .workflow {
   max-width: 1080px;
   margin: 0 auto;
@@ -129,14 +128,16 @@ h2 {
 }
 h2 em { font-style: italic; font-weight: 300; color: var(--muted); }
 
-/* TIMELINE */
+
+/* ── TIMELINE CONTAINER ──────────────────────────────────────────────────── */
+
 .timeline {
   position: relative;
   padding-left: 32px;
 }
 
-.timeline::before {
-  content: '';
+/* faint background track — always visible */
+.timeline-track {
   position: absolute;
   left: 0;
   top: 8px;
@@ -144,6 +145,18 @@ h2 em { font-style: italic; font-weight: 300; color: var(--muted); }
   width: 1px;
   background: var(--border);
 }
+
+/* dark fill that grows with scroll */
+.timeline-fill {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 1px;
+  background: var(--ink);
+  transition: height 0.1s linear;
+  will-change: height;
+}
+
 
 .step {
   position: relative;
@@ -154,16 +167,24 @@ h2 em { font-style: italic; font-weight: 300; color: var(--muted); }
 }
 .step:last-child { padding-bottom: 0; }
 
-.step::before {
-  content: '';
+/* dot */
+.step-dot {
   position: absolute;
   left: -36px;
   top: 8px;
   width: 9px;
   height: 9px;
+  border-radius: 50%;
   background: var(--border);
   border: 2px solid var(--bg);
   outline: 1px solid var(--border);
+  transition: background 0.3s ease, outline-color 0.3s ease;
+}
+
+/* active state — dot fills dark, content sharpens */
+.step--active .step-dot {
+  background: var(--ink);
+  outline-color: var(--ink);
 }
 
 .step-num {
@@ -172,6 +193,7 @@ h2 em { font-style: italic; font-weight: 300; color: var(--muted); }
   letter-spacing: 0.16em;
   color: var(--muted);
   margin-bottom: 8px;
+  transition: color 0.3s ease;
 }
 
 .step-title {
@@ -179,21 +201,38 @@ h2 em { font-style: italic; font-weight: 300; color: var(--muted); }
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.2;
-  color: var(--ink);
+  color: var(--muted);
+  transition: color 0.3s ease;
 }
 
+.step--active .step-num,
+.step--active .step-title {
+  color: var(--ink);
+}
 
 .step-desc {
   font-size: 0.9rem;
   line-height: 1.75;
   color: var(--muted);
   margin-bottom: 24px;
+  opacity: 0.5;
+  transition: opacity 0.4s ease;
+}
+
+.step--active .step-desc {
+  opacity: 1;
 }
 
 .tools {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  opacity: 0.4;
+  transition: opacity 0.4s ease;
+}
+
+.step--active .tools {
+  opacity: 1;
 }
 
 .tool {

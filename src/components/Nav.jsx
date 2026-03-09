@@ -8,7 +8,7 @@ const links = [
     key: "company",
     dropdown: [
       { label: "Meet the team", href: "/team",    desc: "The people behind ChronHR" },
-      { label: "Pricing",       href: "/pricing", desc: "ROI calculator & plans" },
+      { label: "ROI",       href: "/roi", desc: "ROI calculator & plans" },
     ],
   },
 ];

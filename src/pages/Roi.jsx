@@ -4,7 +4,7 @@ import CtaBand from '../components/CtaBand'
 import Slider from '../components/Slider'
 import ResultItem from '../components/ResultItem'
 
-export default function Pricing() {
+export default function Roi() {
   // sliders state
   const [analysts, setAnalysts] = useState(5)
   const [cases, setCases] = useState(20)
@@ -46,7 +46,7 @@ export default function Pricing() {
         </div>
         <p className="header-desc">
           AML analysis is expensive. Between analyst hours, manual data prep and
-          report rework — the costs add up fast. See exactly how much ChronHR
+          report rework, the costs add up fast. See exactly how much ChronHR
           saves your team.
         </p>
       </div>

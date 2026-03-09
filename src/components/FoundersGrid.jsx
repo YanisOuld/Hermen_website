@@ -12,7 +12,7 @@ const founders = [
     initials: "YO",
     role: "Chief Technology Officer",
     name: "Yanis Ould",
-    bio: "Yanis architects the ChronHR platform — from data ingestion pipelines to the analyst-facing interface. He brings deep expertise in distributed systems and data engineering to the compliance space.",
+    bio: "Yanis architects the ChronHR platform. From data ingestion pipelines to the analyst-facing interface. He brings deep expertise in distributed systems and data engineering to the compliance space.",
     linkedin: "#",
   },
 ];

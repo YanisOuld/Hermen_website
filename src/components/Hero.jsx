@@ -19,7 +19,7 @@ function Hero() {
         {/* RIGHT — body + actions + stats */}
         <div className="hero-right">
           <p className="hero-body">
-            ChronHR is an ELT platform built specifically for AML analysts — bringing
+            ChronHR is an ELT platform built specifically for AML analysts. Bringing
             data ingestion, analysis tools and report writing together in a single,
             analyst‑focused workflow.
           </p>

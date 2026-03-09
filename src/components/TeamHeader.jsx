@@ -17,8 +17,7 @@ function TeamHeader() {
             AML analysts deserve better tools.
         </p>
         <p className="page-desc">
-            Today the team includes data scientists, designers and former
-            compliance officers — and it’s still growing.
+            ChronHR is currently developed by a small founding team, bringing together expertise in data, engineering and financial analysis. The team is actively expanding as the project grows.
         </p>
       </div>
     </div>
