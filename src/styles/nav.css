@@ -14,12 +14,26 @@
 }
 
 .nav-logo {
+  text-decoration: none;
+  color: var(--ink);
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo-image {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 24px rgba(15,17,23,0.12));
+  animation: navLogoFloat 5s ease-in-out infinite;
+}
+
+.nav-logo-text {
   font-size: 0.92rem;
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: var(--ink);
-  text-decoration: none;
-  flex-shrink: 0;
 }
 
 /* Links row */
@@ -56,6 +70,7 @@
 .nav-link:hover,
 .nav-link-active {
   color: var(--ink);
+  transform: translateY(-1px);
 }
 
 .nav-link-active {
@@ -132,3 +147,13 @@
 }
 .nav-cta:hover { opacity: 0.75; }
 .nav-cta-active { background: #222; }
+
+@keyframes navLogoFloat {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-2px) rotate(-1deg);
+  }
+}

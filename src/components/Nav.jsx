@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 
+const brandLogo = "/chronhr-logo.png";
+
 const links = [
   { label: "Home",    href: "/",        key: "home" },
   { label: "About",   href: "/about",   key: "about" },
@@ -56,7 +58,10 @@ function Nav({ active }) {
 
   return (
     <nav className="nav">
-      <a href="/" className="nav-logo">CHRONHR</a>
+      <a href="/" className="nav-logo" aria-label="ChronHR home">
+        <img src={brandLogo} alt="ChronHR" className="nav-logo-image" />
+        <span className="nav-logo-text">CHRONHR</span>
+      </a>
 
       <ul className="nav-links" ref={navLinksRef}>
         <div

@@ -1,65 +1,50 @@
+const partners = [
+  {
+    name: "Propolys",
+    desc: "Cybersecurity incubator",
+    mark: "PR",
+    logo: "/propolys.png",
+  },
+  {
+    name: "NextAI",
+    desc: "AI venture program",
+    mark: "NA",
+    logo: "/nextai.png",
+  },
+  {
+    name: "Polytechnique Montréal",
+    desc: "Academic innovation ecosystem",
+    mark: "PM",
+    logo: null,
+  },
+];
+
 function SupportedBy() {
+  const marqueePartners = [...partners, ...partners];
+
   return (
     <div className="supported-top">
-      <div className="supported-claim">Followed closely by</div>
+      <div className="supported-claim">Supported by</div>
       <div className="scroll-track">
         <div className="scroll-inner">
-          {/* Set 1 */}
-          <div className="partner">
-            <div className="partner-logo">
+          {marqueePartners.map((partner, index) => (
+            <div className="partner-group" key={`${partner.name}-${index}`}>
+              <div className="partner">
+                <div className="partner-logo" aria-hidden="true">
+                  {partner.logo ? (
+                    <img src={partner.logo} alt={partner.name} className="partner-logo-image" />
+                  ) : (
+                    <span className="partner-logo-text">{partner.mark}</span>
+                  )}
+                </div>
+                <div>
+                  <div className="partner-name">{partner.name}</div>
+                  <div className="partner-desc">{partner.desc}</div>
+                </div>
+              </div>
+              <div className="partner-sep">—</div>
             </div>
-            <div>
-              <div className="partner-name">Propolys</div>
-              <div className="partner-desc">Cybersecurity</div>
-            </div>
-          </div>
-          <div className="partner-sep">—</div>
-          <div className="partner">
-            <div className="partner-logo">
-            </div>
-            <div>
-              <div className="partner-name">NextAI</div>
-              <div className="partner-desc">AI venture program</div>
-            </div>
-          </div>
-          <div className="partner-sep">—</div>
-          <div className="partner">
-            <div className="partner-logo">
-            </div>
-            <div>
-              <div className="partner-name">Polytechnique</div>
-              <div className="partner-desc">Montréal</div>
-            </div>
-          </div>
-          <div className="partner-sep">—</div>
-          {/* Set 2 (duplicate for seamless loop) */}
-          <div className="partner">
-            <div className="partner-logo">
-            </div>
-            <div>
-              <div className="partner-name">Propolys</div>
-              <div className="partner-desc">Cybersecurity</div>
-            </div>
-          </div>
-          <div className="partner-sep">—</div>
-          <div className="partner">
-            <div className="partner-logo">
-            </div>
-            <div>
-              <div className="partner-name">NextAI</div>
-              <div className="partner-desc">AI venture program</div>
-            </div>
-          </div>
-          <div className="partner-sep">—</div>
-          <div className="partner">
-            <div className="partner-logo">
-            </div>
-            <div>
-              <div className="partner-name">Polytechnique</div>
-              <div className="partner-desc">Montréal</div>
-            </div>
-          </div>
-          <div className="partner-sep">—</div>
+          ))}
         </div>
       </div>
     </div>
