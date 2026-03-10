@@ -26,11 +26,11 @@ export default function GetStartedForm({ onSubmit }) {
         </div>
         <div className="success-title">Request received.</div>
         <p className="success-desc">
-          Thank you for reaching out. A member of the ChronHR team will get
+          Thank you for reaching out. A member of the Chronhr team will get
           back to you within 24 hours to schedule your demo.
         </p>
         <a href="/" className="success-back">
-          ← Back to ChronHR
+          ← Back to Chronhr
         </a>
       </div>
     )

@@ -3,7 +3,7 @@ function WhyDifferent() {
     {
       num: '01',
       title: 'ELT, not just a dashboard',
-      desc: `ChronHR doesn't just display data. It extracts, loads and transforms it into a
+      desc: `Chronhr doesn't just display data. It extracts, loads and transforms it into a
 structured analysis workspace tailored to each case.`,
     },
     {
@@ -15,7 +15,7 @@ works and not around what's easiest to build.`,
     {
       num: '03',
       title: 'Standardized, not rigid',
-      desc: `ChronHR standardizes the workflow without replacing analyst judgment. The tools
+      desc: `Chronhr standardizes the workflow without replacing analyst judgment. The tools
 assist and the analyst decides.`,
     },
   ]
@@ -24,7 +24,7 @@ assist and the analyst decides.`,
     <div className="why-section">
 
       <div className="why-header">
-        <div className="why-eyebrow">Why ChronHR</div>
+        <div className="why-eyebrow">Why Chronhr</div>
         <h2 className="why-title-main">
           Built different.<br />
           <em>By design.</em>

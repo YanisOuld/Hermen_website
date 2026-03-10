@@ -11,13 +11,13 @@ function TeamHeader() {
       </div>
       <div className="team-desc">
         <p className="page-desc">
-          ChronHR was founded by two engineers with a shared conviction
+          Chronhr was founded by two engineers with a shared conviction
         </p>
         <p className="page-desc">
             AML analysts deserve better tools.
         </p>
         <p className="page-desc">
-            ChronHR is currently developed by a small founding team, bringing together expertise in data, engineering and financial analysis. The team is actively expanding as the project grows.
+            Chronhr is currently developed by a small founding team, bringing together expertise in data, engineering and financial analysis. The team is actively expanding as the project grows.
         </p>
       </div>
     </div>

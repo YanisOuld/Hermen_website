@@ -9,7 +9,7 @@ const links = [
     label: "Company",
     key: "company",
     dropdown: [
-      { label: "Meet the team", href: "/team",    desc: "The people behind ChronHR" },
+      { label: "Meet the team", href: "/team",    desc: "The people behind Chronhr" },
       { label: "ROI",       href: "/roi", desc: "ROI calculator & plans" },
     ],
   },
@@ -58,8 +58,8 @@ function Nav({ active }) {
 
   return (
     <nav className="nav">
-      <a href="/" className="nav-logo" aria-label="ChronHR home">
-        <img src={brandLogo} alt="ChronHR" className="nav-logo-image" />
+      <a href="/" className="nav-logo" aria-label="Chronhr home">
+        <img src={brandLogo} alt="Chronhr" className="nav-logo-image" />
         <span className="nav-logo-text">CHRONHR</span>
       </a>
 
@@ -111,7 +111,7 @@ function Nav({ active }) {
         href="/get-started"
         className={`nav-cta ${active === "get-started" ? "nav-cta-active" : ""}`}
       >
-        Get started
+        Book a demo
       </a>
     </nav>
   );

@@ -15,7 +15,7 @@ const partners = [
     name: "Polytechnique Montréal",
     desc: "Academic innovation ecosystem",
     mark: "PM",
-    logo: null,
+    logo: "/polytechnique.png",
   },
 ];
 

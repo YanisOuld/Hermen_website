@@ -1,6 +1,6 @@
-# ChronHR — Marketing Website
+# Chronhr — Marketing Website
 
-Public marketing site for [ChronHR](https://chronhr.com), an AML intelligence platform built for compliance analysts.
+Public marketing site for [Chronhr](https://chronhr.com), an AML intelligence platform built for compliance analysts.
 
 ## Stack
 

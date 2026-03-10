@@ -24,7 +24,7 @@ function SiteFooter() {
           </div>
         </div>
         <div className="footer-bottom">
-          <div>© 2025 ChronHR Inc. · Montréal, Québec</div>
+          <div>© 2025 Chronhr Inc. · Montréal, Québec</div>
           <div className="footer-legal">
             <a href="#">Privacy</a>
             <a href="#">Terms</a>

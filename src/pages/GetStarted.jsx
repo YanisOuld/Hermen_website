@@ -27,7 +27,7 @@ export default function GetStarted() {
           <ExpectItem
             number="02"
             title="We reach out within 24h"
-            desc="A member of the ChronHR team will contact you to schedule a call."
+            desc="A member of the Chronhr team will contact you to schedule a call."
           />
           <ExpectItem
             number="03"

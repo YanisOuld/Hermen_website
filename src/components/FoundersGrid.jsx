@@ -5,17 +5,17 @@ const founders = [
     initials: "AD",
     role: "Chief Executive Officer",
     name: "Aziz Diop",
-    bio: "Aziz Diop est Quant Software Engineer chez Morgan Stanley et CEO de Chronhr. Son parcours combine une expérience en ingénierie quantitative dans un environnement financier exigeant et une forte orientation entrepreneuriale. Avant ChronHR, il a également été cofondateur d’une startup dans le secteur de la santé. Aujourd’hui, il met son expertise technique, analytique et produit au service du développement de Chronhr.",
+    bio: "Aziz Diop is a Quantitative Software Engineer at Morgan Stanley and CEO of ChronHR. His background combines quantitative engineering experience in demanding financial environments with a strong entrepreneurial mindset. Prior to ChronHR, he also co-founded a startup in the healthcare sector. Today, he brings his technical, analytical, and product expertise to the development and growth of Chronhr.",
     photo: "/aziz-diop.jpg",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/aziz-diop-060759209/",
   },
   {
     initials: "YO",
     role: "Chief Technology Officer",
-    name: "Yanis Ould",
-    bio: "Yanis architects the ChronHR platform. From data ingestion pipelines to the analyst-facing interface. He brings deep expertise in distributed systems and data engineering to the compliance space.",
-    photo: null,
-    linkedin: "#",
+    name: "Yanis Ould Mahammed",
+    bio: "Yanis Ould Mahammed is a technology entrepreneur and the recipient of the CyberCap Entrepreneurship Award 2025. He focuses on building practical software solutions that help organizations structure their data, improve decision-making, and solve complex operational challenges. Alongside developing Chronhr, he studies Software Engineering at Polytechnique Montréal, combining technical execution with a strong interest in financial systems and scalable technology.",
+    photo: "/yanis-ould.jpg",
+    linkedin: "https://www.linkedin.com/in/yanis-ould-mahammed-6b8861329/",
   },
 ];
 

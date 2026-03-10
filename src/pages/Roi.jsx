@@ -46,7 +46,7 @@ export default function Roi() {
         </div>
         <p className="header-desc">
           AML analysis is expensive. Between analyst hours, manual data prep and
-          report rework, the costs add up fast. See exactly how much ChronHR
+          report rework, the costs add up fast. See exactly how much Chronhr
           saves your team.
         </p>
       </div>
@@ -106,9 +106,9 @@ export default function Roi() {
             <div className="results-label">Your numbers</div>
             <div className="result-items">
               <ResultItem name="Hours spent on analysis / month" value={`${fmt(totalHours)} h`} />
-              <ResultItem name="Hours saved with ChronHR (2×)" value={`${fmt(savedHours)} h`} />
+              <ResultItem name="Hours saved with Chronhr (2×)" value={`${fmt(savedHours)} h`} />
               <ResultItem name="Current monthly cost" value={`$${fmt(costCurrent)}`} />
-              <ResultItem name="Cost with ChronHR" value={`$${fmt(costAfter)}`} />
+              <ResultItem name="Cost with Chronhr" value={`$${fmt(costAfter)}`} />
             </div>
             <div className="savings-block">
               <div className="savings-pretitle">Monthly savings</div>

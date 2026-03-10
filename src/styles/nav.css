@@ -58,7 +58,7 @@
 .nav-link {
   font-size: 0.85rem;
   font-weight: 400;
-  color: var(--muted);
+  color: var(--ink);
   text-decoration: none;
   transition: color 0.15s;
   display: flex;
@@ -131,7 +131,7 @@
 
 .nav-dropdown-desc {
   font-size: 0.75rem;
-  color: var(--muted);
+  color: var(--ink);
 }
 
 /* CTA */

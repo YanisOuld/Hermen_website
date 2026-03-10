@@ -1,6 +1,4 @@
 /* WHO IT'S FOR */
-.roles {
-}
 
 .roles-inner {
   max-width: 1080px;
@@ -45,5 +43,5 @@
 .role-desc {
   font-size: 0.85rem;
   line-height: 1.65;
-  color: var(--muted);
+  color: var(--ink);
 }

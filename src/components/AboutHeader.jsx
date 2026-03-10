@@ -2,7 +2,7 @@ function AboutHeader() {
   return (
     <div className="page-header">
       <div className="header-left">
-        <div className="page-eyebrow">About ChronHR</div>
+        <div className="page-eyebrow">About Chronhr</div>
 
         <h1>
           One platform.
@@ -11,7 +11,7 @@ function AboutHeader() {
         </h1>
 
         <p className="header-subtitle">
-          Designed by analysts, ChronHR unites data, tools and reports in a
+          Designed by analysts, Chronhr unites data, tools and reports in a
           single workspace so you can focus on decisions instead of prep.
         </p>
       </div>
@@ -29,7 +29,7 @@ function AboutHeader() {
         </ul>
 
         <p className="integration-note">
-          Plug in to your current compliance stack and start using ChronHR in
+          Plug in to your current compliance stack and start using Chronhr in
           days, not months.
         </p>
       </div>

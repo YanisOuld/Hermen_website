@@ -4,13 +4,13 @@ const steps = [
   {
     num: '01',
     title: 'Case intake & data fetch',
-    desc: `A new case is opened. ChronHR automatically fetches all related data across your connected sources: transactions, account history, counterparties and sanctions lists all centralizes it in one workspace. No manual export, no copy-paste.`,
+    desc: `A new case is opened. Chronhr automatically fetches all related data across your connected sources: transactions, account history, counterparties and sanctions lists all centralizes it in one workspace. No manual export, no copy-paste.`,
     tools: ['CSV / SWIFT ingestion', 'SQL connectors', 'REST APIs', 'Auto-normalization', 'Duplicate detection'],
   },
   {
     num: '02',
     title: 'Automatic tool generation',
-    desc: `Based on the data fetched, ChronHR generates the relevant analysis tools automatically. Each tool is tailored to the case. No configuration required. Analysts can focus on interpreting results, not building dashboards.`,
+    desc: `Based on the data fetched, Chronhr generates the relevant analysis tools automatically. Each tool is tailored to the case. No configuration required. Analysts can focus on interpreting results, not building dashboards.`,
     tools: ['Relationship graph', 'Cash flow analysis', 'User card', 'Transaction timeline', 'Network map', 'Counterparty breakdown', 'Sanctions screening'],
   },
   {
@@ -28,7 +28,7 @@ const steps = [
   {
     num: '05',
     title: 'Assisted report writing',
-    desc: `When the analysis is complete, ChronHR drafts the STR or LCTR automatically. It pulls from the case data, annotations and findings. Analysts review, adjust and submit directly to FINTRAC. No blank page, no formatting errors.`,
+    desc: `When the analysis is complete, Chronhr drafts the STR or LCTR automatically. It pulls from the case data, annotations and findings. Analysts review, adjust and submit directly to FINTRAC. No blank page, no formatting errors.`,
     tools: ['STR generation', 'LCTR generation', 'FINTRAC compliance check', 'One-click submission', 'Version history'],
   },
 ]
@@ -41,19 +41,16 @@ export default function WorkflowTimeline() {
 
   useEffect(() => {
     const onScroll = () => {
-      // ── line fill ──────────────────────────────────────────────
       const el = timelineRef.current
       if (!el) return
       const rect = el.getBoundingClientRect()
       const windowH = window.innerHeight
-      // start filling when top of timeline hits 80% of screen, finish when bottom hits 20%
       const start = windowH * 0.75
       const end   = windowH * 0.15
       const raw   = (start - rect.top) / (rect.height - (start - end))
       const pct   = Math.min(100, Math.max(0, raw * 100))
       setFillPct(pct)
 
-      // ── active steps ───────────────────────────────────────────
       const active = stepRefs.current.map((ref) => {
         if (!ref) return false
         const r = ref.getBoundingClientRect()
