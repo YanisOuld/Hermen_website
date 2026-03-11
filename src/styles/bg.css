@@ -9,6 +9,7 @@
   z-index: -1;
 }
 
+/* ─── ORBS ─────────────────────────────────────────────────── */
 
 .orb {
   position: absolute;
@@ -19,19 +20,19 @@
 .orb-1 {
   width: 900px;
   height: 900px;
-  background: radial-gradient(circle, rgba(180, 40, 30, 0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(210, 100, 20, 0.13) 0%, transparent 70%);
   top: -300px;
   right: -200px;
-  animation: float1 28s ease-in-out infinite;
+  animation: float1 32s ease-in-out infinite;
 }
 
 .orb-2 {
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(120, 20, 18, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(180, 70, 10, 0.09) 0%, transparent 70%);
   bottom: -180px;
   left: -120px;
-  animation: float2 22s ease-in-out infinite;
+  animation: float2 26s ease-in-out infinite;
 }
 
 @keyframes float1 {
@@ -46,115 +47,58 @@
   78%      { transform: translate(25px, -18px) scale(0.95); }
 }
 
+/* ─── RIPPLES ───────────────────────────────────────────────── */
 
-.col-a { background: rgba(190, 45, 32, 0.55); }
-.col-b { background: rgba(140, 20, 18, 0.45); }
-.col-c { background: rgba(210, 70, 50, 0.60); }
+/*
+  Each ripple is a circle that starts small and transparent,
+  grows to ~600px, then fades out — slow and ambient.
+  They're staggered so they never all pulse at once.
+*/
 
-.thick   { height: 2px; }
-.thick-v { width: 2px; }
-
-/* Horizontal — ligne pleine largeur qui traverse de gauche à droite */
-.gh {
+.ripple {
   position: absolute;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  opacity: 0;
-  animation: glitch-h linear infinite;
+  border-radius: 50%;
+  border: 1px solid rgba(210, 100, 20, 0.28);
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -50%);
+  animation: ripple-expand ease-out infinite;
+  will-change: transform, opacity;
 }
 
-.gh1 { top:  7%; animation-duration: 18s; animation-delay:  -3s; }
-.gh2 { top: 18%; animation-duration: 27s; animation-delay: -12s; }
-.gh3 { top: 29%; animation-duration: 21s; animation-delay:  -8s; }
-.gh4 { top: 44%; animation-duration: 33s; animation-delay: -19s; }
-.gh5 { top: 57%; animation-duration: 24s; animation-delay: -16s; }
-.gh6 { top: 68%; animation-duration: 22s; animation-delay: -10s; }
-.gh7 { top: 79%; animation-duration: 30s; animation-delay: -22s; }
-.gh8 { top: 91%; animation-duration: 26s; animation-delay:  -6s; }
+/* Positions — scattered across the viewport */
+.rp-1 { left: 72%; top: 18%; animation-duration: 12s; animation-delay:  0s;  }
+.rp-2 { left: 20%; top: 65%; animation-duration: 16s; animation-delay: -5s;  }
+.rp-3 { left: 55%; top: 80%; animation-duration: 14s; animation-delay: -9s;  }
+.rp-4 { left: 85%; top: 50%; animation-duration: 18s; animation-delay: -3s;  }
+.rp-5 { left: 35%; top: 25%; animation-duration: 13s; animation-delay: -11s; }
+.rp-6 { left: 10%; top: 40%; animation-duration: 17s; animation-delay: -7s;  }
 
-/* Vertical — ligne pleine hauteur qui traverse de haut en bas */
-.gv {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 1px;
-  opacity: 0;
-  animation: glitch-v linear infinite;
+/* Second ring per origin — slightly delayed, slightly larger */
+.rp-1b { left: 72%; top: 18%; animation-duration: 12s; animation-delay: -6s;  }
+.rp-2b { left: 20%; top: 65%; animation-duration: 16s; animation-delay: -13s; }
+.rp-3b { left: 55%; top: 80%; animation-duration: 14s; animation-delay: -4s;  }
+
+@keyframes ripple-expand {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 0.15;
+  }
+  100% {
+    width: 560px;
+    height: 560px;
+    opacity: 0;
+  }
 }
 
-.gv1 { left:  8%; animation-duration: 26s; animation-delay:  -5s; }
-.gv2 { left: 22%; animation-duration: 21s; animation-delay: -14s; }
-.gv3 { left: 38%; animation-duration: 34s; animation-delay:  -9s; }
-.gv4 { left: 55%; animation-duration: 28s; animation-delay: -20s; }
-.gv5 { left: 71%; animation-duration: 24s; animation-delay: -11s; }
-.gv6 { left: 88%; animation-duration: 31s; animation-delay: -24s; }
-
-/* Diagonal — wrapper handles position, inner line handles rotation + animation */
-.gd-wrap {
-  position: absolute;
-  left: -50%;
-  width: 200%;
-  height: 1px;
-  overflow: visible;
-}
-
-.gd-wrap-1 { top: 10%; }
-.gd-wrap-2 { top: 35%; }
-.gd-wrap-3 { top: 60%; }
-.gd-wrap-4 { top: 80%; }
-
-.gd {
-  display: block;
-  width: 100%;
-  height: 1px;
-  opacity: 0;
-  transform-origin: left center;
-}
-
-.gd1 { transform: rotate( 18deg); animation: glitch-d linear 29s  -7s  infinite; }
-.gd2 { transform: rotate(-12deg); animation: glitch-d linear 37s  -19s infinite; }
-.gd3 { transform: rotate( 27deg); animation: glitch-d linear 25s  -15s infinite; }
-.gd4 { transform: rotate(-20deg); animation: glitch-d linear 32s  -26s infinite; }
-
-
-/* ─── GLITCH KEYFRAMES ────────────────────────────────────────────────────── */
-
-/* Horizontal — faisceau qui glisse de gauche à droite */
-@keyframes glitch-h {
-  0%        { opacity: 0; clip-path: inset(0 100% 0 0); }
-  90%       { opacity: 0; clip-path: inset(0 100% 0 0); }
-  90.2%     { opacity: 0.9; clip-path: inset(0 85% 0 0); }
-  91.0%     { opacity: 0.85; clip-path: inset(0 20% 0 70%); }
-  91.6%     { opacity: 0.7; clip-path: inset(0 0% 0 90%); }
-  91.8%     { opacity: 0; clip-path: inset(0 0% 0 100%); }
-  100%      { opacity: 0; clip-path: inset(0 0% 0 100%); }
-}
-
-/* Vertical — faisceau qui glisse de haut en bas */
-@keyframes glitch-v {
-  0%        { opacity: 0; clip-path: inset(0 0 100% 0); }
-  85%       { opacity: 0; clip-path: inset(0 0 100% 0); }
-  85.2%     { opacity: 0.8; clip-path: inset(0 0 85% 0); }
-  86.0%     { opacity: 0.75; clip-path: inset(70% 0 20% 0); }
-  86.6%     { opacity: 0.6; clip-path: inset(90% 0 0% 0); }
-  86.8%     { opacity: 0; clip-path: inset(100% 0 0% 0); }
-  100%      { opacity: 0; clip-path: inset(100% 0 0% 0); }
-}
-
-/* Diagonal — même principe horizontal */
-@keyframes glitch-d {
-  0%        { opacity: 0; clip-path: inset(0 100% 0 0); }
-  92%       { opacity: 0; clip-path: inset(0 100% 0 0); }
-  92.2%     { opacity: 0.7; clip-path: inset(0 80% 0 0); }
-  93.0%     { opacity: 0.65; clip-path: inset(0 15% 0 75%); }
-  93.5%     { opacity: 0.5; clip-path: inset(0 0% 0 92%); }
-  93.7%     { opacity: 0; clip-path: inset(0 0% 0 100%); }
-  100%      { opacity: 0; clip-path: inset(0 0% 0 100%); }
-}
-
-
-/* ─── GRAIN ───────────────────────────────────────────────────────────────── */
+/* ─── GRAIN ─────────────────────────────────────────────────── */
 
 .grain {
   position: absolute;

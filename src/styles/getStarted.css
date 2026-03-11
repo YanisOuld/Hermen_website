@@ -21,7 +21,7 @@
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--ink);
   margin-bottom: 24px;
 }
 
@@ -36,13 +36,13 @@ h1 {
 h1 em {
   font-style: italic;
   font-weight: 300;
-  color: var(--muted);
+  color: var(--ink);
 }
 
 .left-desc {
   font-size: 0.95rem;
   line-height: 1.75;
-  color: var(--muted);
+  color: var(--ink);
   margin-bottom: 48px;
   max-width: 380px;
 }
@@ -69,13 +69,12 @@ h1 em {
   font-size: 0.65rem;
   font-weight: 600;
   letter-spacing: 0.14em;
-  color: var(--muted);
+  color: var(--ink);
   padding-top: 2px;
   flex-shrink: 0;
   width: 24px;
 }
 
-.expect-text {}
 .expect-title {
   font-size: 0.88rem;
   font-weight: 600;
@@ -83,7 +82,7 @@ h1 em {
 }
 .expect-desc {
   font-size: 0.82rem;
-  color: var(--muted);
+  color: var(--ink);
   line-height: 1.5;
 }
 
@@ -96,7 +95,7 @@ h1 em {
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--ink);
   margin-bottom: 8px;
 }
 .left-contact-email {
@@ -149,7 +148,7 @@ label {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--ink);
 }
 
 input,
@@ -176,7 +175,7 @@ textarea:focus {
 
 input::placeholder,
 textarea::placeholder {
-  color: var(--muted);
+  color: var(--ink);
   opacity: 0.5;
 }
 
@@ -185,7 +184,7 @@ select {
   background-repeat: no-repeat;
   background-position: right 16px center;
   cursor: pointer;
-  color: var(--muted);
+  color: var(--ink);
 }
 
 select.selected {
@@ -209,7 +208,7 @@ textarea {
 
 .submit-note {
   font-size: 0.78rem;
-  color: var(--muted);
+  color: var(--ink);
   line-height: 1.5;
   max-width: 260px;
 }
@@ -257,7 +256,7 @@ textarea {
 
 .success-desc {
   font-size: 0.9rem;
-  color: var(--muted);
+  color: var(--ink);
   line-height: 1.7;
   max-width: 360px;
 }
@@ -265,7 +264,7 @@ textarea {
 .success-back {
   font-size: 0.85rem;
   font-weight: 500;
-  color: var(--muted);
+  color: var(--ink);
   text-decoration: none;
   border-bottom: 1px solid var(--border);
   padding-bottom: 2px;
@@ -275,4 +274,83 @@ textarea {
 .success-back:hover {
   color: var(--ink);
   border-color: var(--ink);
+}
+
+
+.form-shell {
+  position: relative;
+}
+
+#form-wrapper {
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    filter 0.35s ease;
+}
+
+#form-wrapper.form-blur {
+  opacity: 0.35;
+  transform: scale(0.985);
+  filter: blur(1.5px);
+  pointer-events: none;
+}
+
+.thank-you-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.thank-you-overlay.show {
+  opacity: 1;
+}
+
+.thank-you-card {
+  min-width: 260px;
+  max-width: 340px;
+  padding: 22px 24px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 18px 50px rgba(15, 17, 23, 0.12);
+  text-align: center;
+  transform: translateY(10px) scale(0.98);
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
+}
+
+.thank-you-overlay.show .thank-you-card {
+  transform: translateY(0) scale(1);
+}
+
+.thank-you-icon {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 12px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f4f6;
+  color: #0f1117;
+}
+
+.thank-you-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0f1117;
+  margin-bottom: 6px;
+}
+
+.thank-you-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #5f6673;
 }

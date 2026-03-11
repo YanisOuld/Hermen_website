@@ -30,7 +30,18 @@ function MemberCard({ initials, role, name, bio, linkedin, photo }) {
     >
       <div
         className={`founder-media ${hovered ? "founder-media-hovered" : ""}`}
-        style={photo ? { backgroundImage: `linear-gradient(rgba(15,17,23,0.05), rgba(15,17,23,0.16)), url(${photo})` } : undefined}
+        style={
+          photo
+            ? {
+                backgroundImage: `linear-gradient(rgba(15,17,23,0.05), rgba(15,17,23,0.16)), url(${photo})`,
+                backgroundSize: name === "Aziz Diop" ? "90%" : "cover",
+                backgroundPosition:
+                  name === "Yanis Ould Mahammed"
+                    ? "center 35%"
+                    : "center 5%",
+              }
+            : undefined
+        }
       >
         {!photo && <span className="founder-initials">{initials}</span>}
         <div className="founder-photo-line" />

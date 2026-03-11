@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
-const brandLogo = "/chronhr-logo.png";
+const brandLogo = "/transparent_logo.png";
 
 const links = [
   { label: "Home",    href: "/",        key: "home" },

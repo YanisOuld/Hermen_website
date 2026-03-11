@@ -7,7 +7,7 @@ import ResultItem from '../components/ResultItem'
 export default function Roi() {
   // sliders state
   const [analysts, setAnalysts] = useState(5)
-  const [cases, setCases] = useState(20)
+  const [cases, setCases] = useState(100)
   const [hours, setHours] = useState(1)
   const [cost, setCost] = useState(45)
 
