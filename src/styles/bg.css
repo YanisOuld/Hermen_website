@@ -49,12 +49,6 @@
 
 /* ─── RIPPLES ───────────────────────────────────────────────── */
 
-/*
-  Each ripple is a circle that starts small and transparent,
-  grows to ~600px, then fades out — slow and ambient.
-  They're staggered so they never all pulse at once.
-*/
-
 .ripple {
   position: absolute;
   border-radius: 50%;
@@ -66,36 +60,31 @@
   will-change: transform, opacity;
 }
 
-/* Positions — scattered across the viewport */
-.rp-1 { left: 72%; top: 18%; animation-duration: 12s; animation-delay:  0s;  }
-.rp-2 { left: 20%; top: 65%; animation-duration: 16s; animation-delay: -5s;  }
-.rp-3 { left: 55%; top: 80%; animation-duration: 14s; animation-delay: -9s;  }
-.rp-4 { left: 85%; top: 50%; animation-duration: 18s; animation-delay: -3s;  }
-.rp-5 { left: 35%; top: 25%; animation-duration: 13s; animation-delay: -11s; }
-.rp-6 { left: 10%; top: 40%; animation-duration: 17s; animation-delay: -7s;  }
-
-/* Second ring per origin — slightly delayed, slightly larger */
-.rp-1b { left: 72%; top: 18%; animation-duration: 12s; animation-delay: -6s;  }
+.rp-1  { left: 72%; top: 18%; animation-duration: 12s; animation-delay:   0s; }
+.rp-2  { left: 20%; top: 65%; animation-duration: 16s; animation-delay:  -5s; }
+.rp-3  { left: 55%; top: 80%; animation-duration: 14s; animation-delay:  -9s; }
+.rp-4  { left: 85%; top: 50%; animation-duration: 18s; animation-delay:  -3s; }
+.rp-5  { left: 35%; top: 25%; animation-duration: 13s; animation-delay: -11s; }
+.rp-6  { left: 10%; top: 40%; animation-duration: 17s; animation-delay:  -7s; }
+.rp-1b { left: 72%; top: 18%; animation-duration: 12s; animation-delay:  -6s; }
 .rp-2b { left: 20%; top: 65%; animation-duration: 16s; animation-delay: -13s; }
-.rp-3b { left: 55%; top: 80%; animation-duration: 14s; animation-delay: -4s;  }
+.rp-3b { left: 55%; top: 80%; animation-duration: 14s; animation-delay:  -4s; }
 
 @keyframes ripple-expand {
-  0% {
-    width: 0;
-    height: 0;
-    opacity: 0;
-  }
-  8% {
-    opacity: 0.7;
-  }
-  70% {
-    opacity: 0.15;
-  }
-  100% {
-    width: 560px;
-    height: 560px;
-    opacity: 0;
-  }
+  0%   { width: 0;     height: 0;     opacity: 0;    }
+  8%   {                              opacity: 0.7;  }
+  70%  {                              opacity: 0.15; }
+  100% { width: 560px; height: 560px; opacity: 0;    }
+}
+
+/* ─── DOTS CANVAS ───────────────────────────────────────────── */
+
+.bg-dots-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
 /* ─── GRAIN ─────────────────────────────────────────────────── */
