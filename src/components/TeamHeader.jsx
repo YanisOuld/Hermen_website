@@ -4,20 +4,18 @@ function TeamHeader() {
       <div>
         <div className="page-eyebrow">The team</div>
         <h1>
-          Built by people who
-          <br />
-          <em>understand compliance.</em>
+          Built by people who <em>understand compliance.</em>
         </h1>
       </div>
       <div className="team-desc">
-        <p className="page-desc">
-          Chronhr was founded by two engineers with a shared conviction
+        <p className="page-desc page-desc--lead">
+          Founded by two engineers who believed AML analysts deserved tools
+          built around how they actually work.
         </p>
         <p className="page-desc">
-            AML analysts deserve better tools.
-        </p>
-        <p className="page-desc">
-            Chronhr is currently developed by a small founding team, bringing together expertise in data, engineering and financial analysis. The team is actively expanding as the project grows.
+          Chronhr is developed by a small founding team with expertise across
+          data engineering and financial analysis, expanding as the project
+          grows.
         </p>
       </div>
     </div>
