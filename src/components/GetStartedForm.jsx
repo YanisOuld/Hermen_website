@@ -56,12 +56,12 @@ export default function GetStartedForm() {
         <div className="form-grid">
           <div className="form-group">
             <label>First name</label>
-            <input name="first_name" type="text" placeholder="Aziz" required />
+            <input name="first_name" type="text" placeholder="John" required />
           </div>
 
           <div className="form-group">
             <label>Last name</label>
-            <input name="last_name" type="text" placeholder="Diop" required />
+            <input name="last_name" type="text" placeholder="Doe" required />
           </div>
 
           <div className="form-group">
@@ -76,7 +76,7 @@ export default function GetStartedForm() {
 
           <div className="form-group">
             <label>Company</label>
-            <input name="company" type="text" placeholder="Desjardins" required />
+            <input name="company" type="text" placeholder="..." required />
           </div>
 
           <div className="form-group">
@@ -123,7 +123,7 @@ export default function GetStartedForm() {
           </p>
 
           <button type="submit" className="btn-submit" disabled={isSending}>
-            {isSending ? 'Sending...' : 'Send request →'}
+            {isSending ? 'Sending...' : 'Send request'}
           </button>
         </div>
       </form>

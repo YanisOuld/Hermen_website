@@ -29,8 +29,8 @@ function SiteFooter() {
           <div>
             <div className="footer-col-title">Partners</div>
             <ul className="footer-links">
-              <li><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-              <li><a href="https://www.nextai.com" target="_blank" rel="noopener noreferrer">NextAI</a></li>
+              <li><a href="https://www.linkedin.com/company/chronhr/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              {/*<li><a href="https://www.nextai.com" target="_blank" rel="noopener noreferrer">NextAI</a></li>*/}
               <li><a href="https://propolys.com" target="_blank" rel="noopener noreferrer">Propolys</a></li>
               <li><a href="mailto:contact@chronhr.com">contact@chronhr.com</a></li>
             </ul>

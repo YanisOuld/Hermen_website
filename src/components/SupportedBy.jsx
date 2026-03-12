@@ -5,12 +5,12 @@ const partners = [
     mark: "PR",
     logo: "/propolys.png",
   },
-  {
+  /*{
     name: "NextAI",
     desc: "AI venture program",
     mark: "NA",
     logo: "/nextai.png",
-  },
+  },*/
   {
     name: "Polytechnique Montréal",
     desc: "Academic innovation ecosystem",

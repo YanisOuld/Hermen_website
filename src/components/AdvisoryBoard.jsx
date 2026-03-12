@@ -14,14 +14,14 @@ function AdvisoryBoard() {
           </a>
         </div>
         <div className="member">
-          <a href="https://www.linkedin.com/in/boubacar-leye-48687ab/"></a>
+          <a href="https://www.linkedin.com/in/boubacar-leye-48687ab/">
             <div className="member-name">Boubacar Leye</div>
             <div className="member-role">
               Senior Compliance Manager,
               <br />
               HSBC
             </div>
-          <a/>
+          </a>
         </div>
       </div>
     </div>

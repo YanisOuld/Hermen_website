@@ -11,8 +11,8 @@ export default function GetStarted() {
         <h1>
           Let's talk.
           <br />
-          <em>We'll take it<br />from there.</em>
-        </h1>
+          <em>We'll work<br />from there.</em>
+        </h1> 
         <p className="left-desc">
           Tell us about your team and your current workflow. We'll reach out within
           24 hours to schedule a demo tailored to your needs.

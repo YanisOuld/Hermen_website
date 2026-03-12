@@ -94,7 +94,6 @@ export default function WorkflowTimeline() {
             <div className="step-dot" />
 
             <div className="step-meta">
-              <div className="step-num">{step.num}</div>
               <div className="step-title">{step.title}</div>
             </div>
             <div className="step-content">

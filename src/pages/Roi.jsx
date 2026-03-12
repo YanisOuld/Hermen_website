@@ -7,9 +7,9 @@ import ResultItem from '../components/ResultItem'
 export default function Roi() {
   // sliders state
   const [analysts, setAnalysts] = useState(5)
-  const [cases, setCases] = useState(100)
+  const [cases, setCases] = useState(150)
   const [hours, setHours] = useState(1)
-  const [cost, setCost] = useState(45)
+  const [cost, setCost] = useState(40)
 
   // derived values
   const totalHours = analysts * cases * hours
@@ -75,8 +75,8 @@ export default function Roi() {
             <Slider
               label="Cases per analyst / month"
               value={cases}
-              min={5}
-              max={200}
+              min={25}
+              max={250}
               unit="cases"
               desc="Average number of cases handled per analyst monthly"
               onChange={setCases}
@@ -93,8 +93,8 @@ export default function Roi() {
             <Slider
               label="Analyst hourly cost"
               value={cost}
-              min={40}
-              max={200}
+              min={25}
+              max={100}
               unit="$ / h"
               desc="Fully loaded cost including salary and overhead"
               onChange={setCost}
