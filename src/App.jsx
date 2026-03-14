@@ -7,11 +7,13 @@ import Home from './pages/Home'
 import GetStarted from './pages/GetStarted'
 import Roi from './pages/Roi'
 import Background from './components/Background'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
     <>
       <Background />
+      <ScrollToTop />
       <Nav />
       
       <Routes>

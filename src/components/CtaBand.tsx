@@ -9,7 +9,11 @@ function CtaBand() {
           <br />
           <em>in action?</em>
         </div>
-        <Link to="/get-started" className="btn-primary">
+        <Link
+          to="/get-started"
+          className="btn-primary"
+          onClick={() => window.scrollTo(0, 0)}
+        >
           Book a demo
         </Link>
       </div>

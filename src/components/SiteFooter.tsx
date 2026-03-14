@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 function SiteFooter() {
   return (
     <footer>
@@ -17,11 +19,11 @@ function SiteFooter() {
           <div>
             <div className="footer-col-title">Pages</div>
             <ul className="footer-links">
-              <li><a href="/">Home</a></li>
-              <li><a href="/about">About</a></li>
-              <li><a href="/team">Meet the team</a></li>
-              <li><a href="/pricing">Pricing</a></li>
-              <li><a href="/get-started">Get started</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/team">Meet the team</Link></li>
+              <li><Link to="/roi">Pricing</Link></li>
+              <li><Link to="/get-started">Get started</Link></li>
             </ul>
           </div>
 
@@ -31,7 +33,7 @@ function SiteFooter() {
             <ul className="footer-links">
               <li><a href="https://www.linkedin.com/company/chronhr/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
               {/*<li><a href="https://www.nextai.com" target="_blank" rel="noopener noreferrer">NextAI</a></li>*/}
-              <li><a href="https://propolys.com" target="_blank" rel="noopener noreferrer">Propolys</a></li>
+              <li><a href="https://www.parcours-entrepreneuriaux.polymtl.ca/" target="_blank" rel="noopener noreferrer">Propolys</a></li>
               <li><a href="mailto:contact@chronhr.com">contact@chronhr.com</a></li>
             </ul>
           </div>

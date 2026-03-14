@@ -189,6 +189,7 @@ function Nav() {
           className={({ isActive }) =>
             `nav-cta ${isActive ? "nav-cta-active" : ""}`
           }
+          onClick={() => window.scrollTo(0, 0)}
         >
           Book a demo
         </NavLink>

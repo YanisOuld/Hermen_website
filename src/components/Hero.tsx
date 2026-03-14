@@ -26,7 +26,13 @@ function Hero() {
           </p>
 
           <div className="hero-actions">
-            <Link to="/get-started" className="btn-primary">Book a demo</Link>
+            <Link
+              to="/get-started"
+              className="btn-primary"
+              onClick={() => window.scrollTo(0, 0)}
+            >
+              Book a demo
+            </Link>
           </div>
 
           {/* Stats — pinned below actions */}
