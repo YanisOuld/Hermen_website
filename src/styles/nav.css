@@ -100,6 +100,12 @@
   font-weight: 500;
 }
 
+.nav-links button.nav-link,
+.nav-links button.nav-link.nav-link-active {
+  font-weight: 400;
+  color: var(--ink);
+}
+
 /* Chevron */
 .nav-chevron {
   font-size: 0.7rem;
@@ -240,12 +246,18 @@
 
   .nav-link {
     font-size: 0.84rem;
-    font-weight: 500;
+    font-weight: 400;
+    line-height: 1.2;
     padding: 8px 4px;
   }
 
   .nav-link-active {
-    font-weight: 500;
+    font-weight: 400;
+    transform: none;
+  }
+
+  .nav-link:hover {
+    transform: none;
   }
 
   .nav-underline {
@@ -288,6 +300,8 @@
 
   .nav-link {
     font-size: 0.82rem;
+    font-weight: 400;
+    line-height: 1.2;
     padding: 8px 3px;
   }
 
