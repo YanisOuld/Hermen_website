@@ -12,7 +12,7 @@ export default function Roi() {
   const [cost, setCost] = useState(40)
 
   // derived values
-  const totalHours = analysts * cases * hours
+  const totalHours = analysts * cases * hours * 12
   const savedHours = Math.round(totalHours / 2)
   const costCurrent = totalHours * cost
   const costAfter = savedHours * cost
@@ -105,13 +105,13 @@ export default function Roi() {
           <div className="calc-results">
             <div className="results-label">Your numbers</div>
             <div className="result-items">
-              <ResultItem name="Hours spent on analysis / month" value={`${fmt(totalHours)} h`} />
+              <ResultItem name="Hours spent on analysis / year" value={`${fmt(totalHours)} h`} />
               <ResultItem name="Hours saved with Chronhr (2×)" value={`${fmt(savedHours)} h`} />
-              <ResultItem name="Current monthly cost" value={`$${fmt(costCurrent)}`} />
+              <ResultItem name="Current yearly cost" value={`$${fmt(costCurrent)}`} />
               <ResultItem name="Cost with Chronhr" value={`$${fmt(costAfter)}`} />
             </div>
             <div className="savings-block">
-              <div className="savings-pretitle">Monthly savings</div>
+              <div className="savings-pretitle">Yearly savings</div>
               <div className="savings-amount" ref={savingsRef}>
                 <span className="currency">$</span>
                 <span>{fmt(savings)}</span>
