@@ -1,3 +1,4 @@
+import { Link, NavLink } from "react-router-dom";
 
 function Hero() {
   return (
@@ -25,7 +26,7 @@ function Hero() {
           </p>
 
           <div className="hero-actions">
-            <a href="/get-started" className="btn-primary">Book a demo</a>
+            <Link to="/get-started" className="btn-primary">Book a demo</Link>
           </div>
 
           {/* Stats — pinned below actions */}

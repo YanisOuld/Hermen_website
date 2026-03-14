@@ -5,7 +5,7 @@ const brandLogo = "/transparent_logo.png";
 
 const links = [
   { label: "Home", to: "/", key: "home" },
-  { label: "About", to: "/about", key: "about" },
+  { label: "How it works", to: "/about", key: "about" },
   {
     label: "Company",
     key: "company",

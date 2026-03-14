@@ -1,7 +1,7 @@
 function HowItWorks() {
   return (
     <div className="how" id="how">
-      <div className="section-label">How it works</div>
+      <div className="section-label">Overview</div>
       <h2>
         Three steps. <em>One platform.</em>
       </h2>
