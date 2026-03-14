@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import '../styles/pricing.css'
-import CtaBand from '../components/CtaBand'
+import CtaBand from '../components/CtaBand.tsx'
 import Slider from '../components/Slider'
 import ResultItem from '../components/ResultItem'
 

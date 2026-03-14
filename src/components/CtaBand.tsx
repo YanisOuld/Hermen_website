@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 function CtaBand() {
   return (
     <div className="cta-band">
@@ -7,9 +9,9 @@ function CtaBand() {
           <br />
           <em>in action?</em>
         </div>
-        <a href="/get-started" className="btn-primary">
+        <Link to="/get-started" className="btn-primary">
           Book a demo
-        </a>
+        </Link>
       </div>
     </div>
   )
