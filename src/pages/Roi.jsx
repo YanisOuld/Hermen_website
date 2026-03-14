@@ -4,19 +4,35 @@ import CtaBand from '../components/CtaBand.tsx'
 import Slider from '../components/Slider'
 import ResultItem from '../components/ResultItem'
 
+const CASE_PERIOD_OPTIONS = [
+  { key: 'day', label: 'Per day', factorToMonth: 22 },
+  { key: 'week', label: 'Per week', factorToMonth: 4.33 },
+  { key: 'month', label: 'Per month', factorToMonth: 1 },
+]
+
 export default function Roi() {
   // sliders state
   const [analysts, setAnalysts] = useState(5)
-  const [cases, setCases] = useState(150)
+  const [cases, setCases] = useState(120)
+  const [casePeriod, setCasePeriod] = useState('month')
   const [hours, setHours] = useState(1)
   const [cost, setCost] = useState(40)
 
+  const selectedPeriod = CASE_PERIOD_OPTIONS.find((option) => option.key === casePeriod)
+    ?? CASE_PERIOD_OPTIONS[2]
+
   // derived values
-  const totalHours = analysts * cases * hours * 12
-  const savedHours = Math.round(totalHours / 2)
-  const costCurrent = totalHours * cost
-  const costAfter = savedHours * cost
-  const savings = costCurrent - costAfter
+  const casesPerAnalystPerMonth = cases * selectedPeriod.factorToMonth
+  const totalHoursMonth = analysts * casesPerAnalystPerMonth * hours
+  const totalHoursYear = totalHoursMonth * 12
+  const savedHoursMonth = totalHoursMonth / 2
+  const savedHoursYear = totalHoursYear / 2
+  const costCurrentMonth = totalHoursMonth * cost
+  const costCurrentYear = totalHoursYear * cost
+  const costAfterMonth = savedHoursMonth * cost
+  const costAfterYear = savedHoursYear * cost
+  const savingsMonth = costCurrentMonth - costAfterMonth
+  const savingsYear = costCurrentYear - costAfterYear
 
   const savingsRef = useRef(null)
 
@@ -28,9 +44,9 @@ export default function Roi() {
       const id = setTimeout(() => (el.style.transform = 'scale(1)'), 200)
       return () => clearTimeout(id)
     }
-  }, [savings])
+  }, [savingsYear])
 
-  const fmt = (n) => n.toLocaleString('en-CA')
+  const fmt = (n) => Math.round(n).toLocaleString('en-CA')
 
   return (
     <div>
@@ -68,17 +84,37 @@ export default function Roi() {
               value={analysts}
               min={1}
               max={50}
+              step={1}
               unit="analysts"
               desc="Full-time AML analysts on your team"
               onChange={setAnalysts}
             />
+
+            <div className="cases-period-control">
+              <div className="cases-period-label">Cases unit</div>
+              <div className="cases-period-options" role="tablist" aria-label="Cases period">
+                {CASE_PERIOD_OPTIONS.map((option) => (
+                  <button
+                    key={option.key}
+                    type="button"
+                    className={`cases-period-btn ${casePeriod === option.key ? 'cases-period-btn-active' : ''}`}
+                    onClick={() => setCasePeriod(option.key)}
+                    aria-pressed={casePeriod === option.key}
+                  >
+                    {option.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
             <Slider
-              label="Cases per analyst / month"
+              label={`Cases per analyst / ${casePeriod}`}
               value={cases}
-              min={25}
-              max={250}
+              min={1}
+              max={300}
+              step={1}
               unit="cases"
-              desc="Average number of cases handled per analyst monthly"
+              desc="Choose average volume handled by one analyst for the selected period"
               onChange={setCases}
             />
             <Slider
@@ -86,6 +122,7 @@ export default function Roi() {
               value={hours}
               min={0.5}
               max={10}
+              step={0.5}
               unit="h / case"
               desc="Average time to complete one full analysis today"
               onChange={setHours}
@@ -95,6 +132,7 @@ export default function Roi() {
               value={cost}
               min={25}
               max={100}
+              step={1}
               unit="$ / h"
               desc="Fully loaded cost including salary and overhead"
               onChange={setCost}
@@ -105,18 +143,24 @@ export default function Roi() {
           <div className="calc-results">
             <div className="results-label">Your numbers</div>
             <div className="result-items">
-              <ResultItem name="Hours spent on analysis / year" value={`${fmt(totalHours)} h`} />
-              <ResultItem name="Hours saved with Chronhr (2×)" value={`${fmt(savedHours)} h`} />
-              <ResultItem name="Current yearly cost" value={`$${fmt(costCurrent)}`} />
-              <ResultItem name="Cost with Chronhr" value={`$${fmt(costAfter)}`} />
+              <ResultItem name="Hours spent on analysis / month" value={`${fmt(totalHoursMonth)} h`} />
+              <ResultItem name="Hours spent on analysis / year" value={`${fmt(totalHoursYear)} h`} />
+              <ResultItem name="Hours saved with Chronhr / month" value={`${fmt(savedHoursMonth)} h`} />
+              <ResultItem name="Hours saved with Chronhr / year" value={`${fmt(savedHoursYear)} h`} />
+              <ResultItem name="Current cost / month" value={`$${fmt(costCurrentMonth)}`} />
+              <ResultItem name="Current cost / year" value={`$${fmt(costCurrentYear)}`} />
+              <ResultItem name="Cost with Chronhr / month" value={`$${fmt(costAfterMonth)}`} />
+              <ResultItem name="Cost with Chronhr / year" value={`$${fmt(costAfterYear)}`} />
             </div>
             <div className="savings-block">
-              <div className="savings-pretitle">Yearly savings</div>
+              <div className="savings-pretitle">Estimated savings / year</div>
               <div className="savings-amount" ref={savingsRef}>
                 <span className="currency">$</span>
-                <span>{fmt(savings)}</span>
+                <span>{fmt(savingsYear)}</span>
               </div>
-              <div className="savings-sub">Based on 2× faster analysis — conservative estimate</div>
+              <div className="savings-sub">
+                Approx. ${fmt(savingsMonth)} per month, assuming a 2x faster analysis workflow.
+              </div>
             </div>
           </div>
         </div>

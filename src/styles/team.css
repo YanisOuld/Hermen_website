@@ -264,3 +264,46 @@
   font-weight: 500;
   color: var(--ink);
 }
+
+@media (max-width: 900px) {
+  .team,
+  .founders-grid-wrap {
+    padding: 64px 24px;
+  }
+
+  .member-card {
+    padding: 0 24px 0 0;
+    margin-right: 24px;
+  }
+
+  .founders-column-left {
+    padding-right: 24px;
+  }
+
+  .founders-column-right {
+    padding-left: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .team,
+  .founders-grid-wrap {
+    padding: 52px 18px;
+  }
+
+  .team .section-label,
+  .founders-label {
+    margin-bottom: 28px;
+  }
+
+  .member-name,
+  .founder-name {
+    font-size: 1.25rem;
+  }
+
+  .member-bio,
+  .founder-bio {
+    font-size: 0.85rem;
+    line-height: 1.65;
+  }
+}

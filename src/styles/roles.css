@@ -45,3 +45,41 @@
   line-height: 1.65;
   color: var(--ink);
 }
+
+@media (max-width: 900px) {
+  .roles-inner {
+    padding: 56px 24px;
+  }
+
+  .roles-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .role-item {
+    padding: 0;
+    margin-right: 0;
+    border-right: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .roles-inner {
+    padding: 48px 18px;
+  }
+
+  .roles-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .role-item {
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .role-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}

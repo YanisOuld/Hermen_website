@@ -1,4 +1,4 @@
-export default function Slider({ label, value, min, max, unit, desc, onChange }) {
+export default function Slider({ label, value, min, max, step = 1, unit, desc, onChange }) {
   return (
     <div className="slider-group">
       <div className="slider-header">
@@ -12,6 +12,7 @@ export default function Slider({ label, value, min, max, unit, desc, onChange })
         type="range"
         min={min}
         max={max}
+        step={step}
         value={value}
         onChange={(e) => onChange(+e.target.value)}
       />

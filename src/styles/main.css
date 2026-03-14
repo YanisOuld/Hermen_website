@@ -14,3 +14,87 @@
 html, body {
   overflow-x: hidden;
 }
+
+html,
+body,
+#root {
+  background: var(--bg);
+}
+
+#root {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+:root {
+  --page-pad: 52px;
+}
+
+.hero-top,
+.how,
+.roles-inner,
+.workflow,
+.why-section,
+.team,
+.founders-grid-wrap,
+.supported-inner,
+.cta-inner,
+.footer-inner,
+.page-header,
+.calc-section,
+.left,
+.right {
+  padding-left: var(--page-pad);
+  padding-right: var(--page-pad);
+}
+
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --page-pad: 24px;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --page-pad: 20px;
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+  .nav-inner {
+    padding-left: max(10px, env(safe-area-inset-left));
+    padding-right: max(10px, env(safe-area-inset-right));
+  }
+
+  .hero-top,
+  .how,
+  .roles-inner,
+  .workflow,
+  .why-section,
+  .team,
+  .founders-grid-wrap,
+  .supported-inner,
+  .cta-inner,
+  .footer-inner,
+  .page-header,
+  .calc-section,
+  .left,
+  .right {
+    padding-left: max(var(--page-pad), env(safe-area-inset-left));
+    padding-right: max(var(--page-pad), env(safe-area-inset-right));
+  }
+}

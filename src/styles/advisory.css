@@ -52,3 +52,36 @@
   text-decoration: none;
   color: inherit;
 }
+
+@media (max-width: 900px) {
+  .advisory {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .advisory-members {
+    gap: 18px;
+  }
+
+  .member {
+    padding: 0;
+    margin-right: 0;
+    border-right: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .advisory-members {
+    flex-direction: column;
+  }
+
+  .member {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 14px;
+  }
+
+  .member:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}

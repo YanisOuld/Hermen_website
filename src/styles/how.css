@@ -34,3 +34,33 @@
   line-height: 1.7;
   color: var(--ink);
 }
+
+@media (max-width: 900px) {
+  .how {
+    padding: 56px 24px;
+  }
+
+  .how-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .how-item {
+    padding-right: 0;
+    margin-right: 0;
+    padding-bottom: 20px;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .how-item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .how {
+    padding: 48px 18px;
+  }
+}

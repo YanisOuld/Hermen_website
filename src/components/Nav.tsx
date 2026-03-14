@@ -19,6 +19,7 @@ const links = [
 function Nav() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [underline, setUnderline] = useState({ left: 0, width: 0, opacity: 0 });
+  const navRootRef = useRef<HTMLElement | null>(null);
   const navLinksRef = useRef<HTMLUListElement | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const location = useLocation();
@@ -42,6 +43,31 @@ function Nav() {
   useEffect(() => {
     return () => {
       if (closeTimer.current) clearTimeout(closeTimer.current);
+    };
+  }, []);
+
+  useEffect(() => {
+    function handleOutsideClose(event: MouseEvent | TouchEvent) {
+      const target = event.target as Node;
+      if (!navRootRef.current?.contains(target)) {
+        setOpenDropdown(null);
+      }
+    }
+
+    function handleEsc(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setOpenDropdown(null);
+      }
+    }
+
+    document.addEventListener("mousedown", handleOutsideClose);
+    document.addEventListener("touchstart", handleOutsideClose, { passive: true });
+    document.addEventListener("keydown", handleEsc);
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClose);
+      document.removeEventListener("touchstart", handleOutsideClose);
+      document.removeEventListener("keydown", handleEsc);
     };
   }, []);
 
@@ -80,89 +106,93 @@ function Nav() {
     location.pathname === "/team" || location.pathname === "/roi";
 
   return (
-    <nav className="nav">
-      <Link to="/" className="nav-logo" aria-label="Chronhr home">
-        <img src={brandLogo} alt="Chronhr" className="nav-logo-image" />
-        <span className="nav-logo-text">CHRONHR</span>
-      </Link>
+    <nav className="nav" ref={navRootRef}>
+      <div className="nav-inner">
+        <Link to="/" className="nav-logo" aria-label="Chronhr home">
+          <img src={brandLogo} alt="Chronhr" className="nav-logo-image" />
+          <span className="nav-logo-text">CHRONHR</span>
+        </Link>
 
-      <ul className="nav-links" ref={navLinksRef}>
-        <div
-          className="nav-underline"
-          style={{
-            left: underline.left,
-            width: underline.width,
-            opacity: underline.opacity,
-          }}
-        />
+        <ul className="nav-links" ref={navLinksRef}>
+          <div
+            className="nav-underline"
+            style={{
+              left: underline.left,
+              width: underline.width,
+              opacity: underline.opacity,
+            }}
+          />
 
-        {links.map((link) => (
-          <li key={link.key} style={{ position: "relative" }}>
-            {link.dropdown ? (
-              <>
-                <button
-                  type="button"
-                  className={`nav-link ${isCompanyActive ? "nav-link-active" : ""}`}
+          {links.map((link) => (
+            <li key={link.key} style={{ position: "relative" }}>
+              {link.dropdown ? (
+                <>
+                  <button
+                    type="button"
+                    className={`nav-link ${isCompanyActive ? "nav-link-active" : ""}`}
+                    onMouseEnter={(e) => handleMouseEnter(e, link.key)}
+                    onMouseLeave={handleMouseLeave}
+                    aria-haspopup="menu"
+                    aria-expanded={openDropdown === link.key}
+                    onClick={() =>
+                      setOpenDropdown((prev) => (prev === link.key ? null : link.key))
+                    }
+                  >
+                    {link.label}
+                    <span
+                      className="nav-chevron"
+                      style={{
+                        transform:
+                          openDropdown === link.key ? "rotate(180deg)" : "rotate(0deg)",
+                      }}
+                    >
+                      ‹
+                    </span>
+                  </button>
+
+                  <div
+                    className={`nav-dropdown ${openDropdown === link.key ? "nav-dropdown-open" : ""}`}
+                    onMouseEnter={handleDropdownEnter}
+                    onMouseLeave={handleDropdownLeave}
+                  >
+                    {link.dropdown.map((item) => (
+                      <NavLink
+                        key={item.to}
+                        to={item.to}
+                        className="nav-dropdown-item"
+                        onClick={() => setOpenDropdown(null)}
+                      >
+                        <span className="nav-dropdown-label">{item.label}</span>
+                        <span className="nav-dropdown-desc">{item.desc}</span>
+                      </NavLink>
+                    ))}
+                  </div>
+                </>
+              ) : (
+                <NavLink
+                  to={link.to!}
+                  className={({ isActive }) =>
+                    `nav-link ${isActive ? "nav-link-active" : ""}`
+                  }
                   onMouseEnter={(e) => handleMouseEnter(e, link.key)}
                   onMouseLeave={handleMouseLeave}
-                  onClick={() =>
-                    setOpenDropdown((prev) => (prev === link.key ? null : link.key))
-                  }
                 >
                   {link.label}
-                  <span
-                    className="nav-chevron"
-                    style={{
-                      transform:
-                        openDropdown === link.key ? "rotate(180deg)" : "rotate(0deg)",
-                    }}
-                  >
-                    ‹
-                  </span>
-                </button>
+                </NavLink>
+              )}
+            </li>
+          ))}
+        </ul>
 
-                <div
-                  className={`nav-dropdown ${openDropdown === link.key ? "nav-dropdown-open" : ""}`}
-                  onMouseEnter={handleDropdownEnter}
-                  onMouseLeave={handleDropdownLeave}
-                >
-                  {link.dropdown.map((item) => (
-                    <NavLink
-                      key={item.to}
-                      to={item.to}
-                      className="nav-dropdown-item"
-                      onClick={() => setOpenDropdown(null)}
-                    >
-                      <span className="nav-dropdown-label">{item.label}</span>
-                      <span className="nav-dropdown-desc">{item.desc}</span>
-                    </NavLink>
-                  ))}
-                </div>
-              </>
-            ) : (
-              <NavLink
-                to={link.to!}
-                className={({ isActive }) =>
-                  `nav-link ${isActive ? "nav-link-active" : ""}`
-                }
-                onMouseEnter={(e) => handleMouseEnter(e, link.key)}
-                onMouseLeave={handleMouseLeave}
-              >
-                {link.label}
-              </NavLink>
-            )}
-          </li>
-        ))}
-      </ul>
-
-      <NavLink
-        to="/get-started"
-        className={({ isActive }) =>
-          `nav-cta ${isActive ? "nav-cta-active" : ""}`
-        }
-      >
-        Book a demo
-      </NavLink>
+        <NavLink
+          to="/get-started"
+          className={({ isActive }) =>
+            `nav-cta ${isActive ? "nav-cta-active" : ""}`
+          }
+        >
+          Book a demo
+        </NavLink>
+      </div>
     </nav>
   );
 }

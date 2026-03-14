@@ -82,3 +82,36 @@ footer {
 .footer-legal a:hover {
   color: rgba(247,246,242,0.45);
 }
+
+@media (max-width: 900px) {
+  .footer-inner {
+    padding: 40px 24px 28px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-inner {
+    padding: 34px 18px 24px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .footer-legal {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+}

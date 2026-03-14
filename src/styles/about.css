@@ -278,7 +278,7 @@ h2 em { font-style: italic; font-weight: 300; color: var(--ink); }
 .why {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 50px 15ppx;
+  padding: 50px 52px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 0;
@@ -349,3 +349,121 @@ h2 em { font-style: italic; font-weight: 300; color: var(--ink); }
   transition: opacity 0.15s;
 }
 .btn-primary:hover { opacity: 0.8; }
+
+@media (max-width: 900px) {
+  .page-header {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    padding: 116px 24px 72px;
+  }
+
+  .team-desc,
+  .header-subtitle {
+    margin-top: 0;
+    max-width: 100%;
+  }
+
+  .workflow {
+    padding: 64px 24px;
+  }
+
+  .workflow h2 {
+    margin-bottom: 44px;
+  }
+
+  .step {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding-bottom: 44px;
+  }
+
+  .step-dot {
+    left: -28px;
+  }
+
+  .step-desc {
+    margin-bottom: 14px;
+  }
+
+  .why-section {
+    padding: 16px 24px 52px;
+  }
+
+  .why {
+    padding: 34px 0 0;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .why-item {
+    padding-right: 0;
+    margin-right: 0;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+  }
+
+  .why-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .cta-inner {
+    padding: 56px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-header {
+    padding: 102px 18px 56px;
+  }
+
+  .page-header h1 {
+    font-size: clamp(1.95rem, 9vw, 2.7rem);
+    line-height: 1.06;
+  }
+
+  .header-subtitle,
+  .page-mission,
+  .mission-list li,
+  .integration-note {
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  .workflow {
+    padding: 52px 18px;
+  }
+
+  .timeline {
+    padding-left: 22px;
+  }
+
+  .step-dot {
+    left: -26px;
+  }
+
+  .tools {
+    gap: 6px;
+  }
+
+  .tool {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+  }
+
+  .why-section {
+    padding: 14px 18px 46px;
+  }
+
+  .cta-inner {
+    padding: 48px 18px;
+  }
+
+  .cta-title {
+    font-size: clamp(1.3rem, 8vw, 1.9rem);
+  }
+}

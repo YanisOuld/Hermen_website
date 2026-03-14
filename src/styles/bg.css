@@ -97,3 +97,30 @@
   background-size: 160px;
   pointer-events: none;
 }
+
+@media (max-width: 900px) {
+  .orb-1 {
+    width: 620px;
+    height: 620px;
+    top: -210px;
+    right: -190px;
+  }
+
+  .orb-2 {
+    width: 420px;
+    height: 420px;
+  }
+
+  .ripple {
+    animation-duration: 20s;
+  }
+}
+
+@media (max-width: 640px) {
+  .orb-1,
+  .orb-2,
+  .ripple,
+  .grain {
+    display: none;
+  }
+}
