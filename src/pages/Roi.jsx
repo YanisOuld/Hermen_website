@@ -143,14 +143,19 @@ export default function Roi() {
           <div className="calc-results">
             <div className="results-label">Your numbers</div>
             <div className="result-items">
-              <ResultItem name="Hours spent on analysis / month" value={`${fmt(totalHoursMonth)} h`} />
-              <ResultItem name="Hours spent on analysis / year" value={`${fmt(totalHoursYear)} h`} />
-              <ResultItem name="Hours saved with Chronhr / month" value={`${fmt(savedHoursMonth)} h`} />
-              <ResultItem name="Hours saved with Chronhr / year" value={`${fmt(savedHoursYear)} h`} />
-              <ResultItem name="Current cost / month" value={`$${fmt(costCurrentMonth)}`} />
-              <ResultItem name="Current cost / year" value={`$${fmt(costCurrentYear)}`} />
-              <ResultItem name="Cost with Chronhr / month" value={`$${fmt(costAfterMonth)}`} />
-              <ResultItem name="Cost with Chronhr / year" value={`$${fmt(costAfterYear)}`} />
+                <div className="results-group">
+                  <div className="results-group-title">Time</div>
+                  <ResultItem name="Hours spent on analysis / year" value={`${fmt(totalHoursYear)} h`} />
+                  <ResultItem name="Hours saved with Chronhr / year" value={`${fmt(savedHoursYear)} h`} />
+                </div>
+
+                {/* Cost */}
+                <div className="results-group">
+                  <div className="results-group-title">Cost</div>
+                  <ResultItem name="Current cost / year" value={`$${fmt(costCurrentYear)}`} />
+                  <ResultItem name="Cost with Chronhr / year" value={`$${fmt(costAfterYear)}`} />
+                  <ResultItem name="Cost with Chronhr / month" value={`$${fmt(costAfterMonth)}`} />
+                </div>
             </div>
             <div className="savings-block">
               <div className="savings-pretitle">Estimated savings / year</div>

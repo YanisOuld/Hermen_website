@@ -5,7 +5,7 @@ const founders = [
     initials: "AD",
     role: "Chief Executive Officer",
     name: "Aziz Diop",
-    bio: "Aziz Diop is a Quantitative Software Engineer at Morgan Stanley and CEO of ChronHR. His background combines quantitative engineering experience in demanding financial environments with a strong entrepreneurial mindset. Prior to ChronHR, he also co-founded a startup in the healthcare sector. Today, he brings his technical, analytical, and product expertise to the development and growth of Chronhr.",
+    bio: "Aziz Diop is a Quantitative Software Engineer at Morgan Stanley and CEO of Chronhr. His background combines quantitative engineering experience in demanding financial environments with a strong entrepreneurial mindset. Prior to Chronhr, he also co-founded a startup in the healthcare sector. Today, he brings his technical, analytical, and product expertise to the development and growth of Chronhr.",
     photo: "/aziz-diop.jpg",
     linkedin: "https://www.linkedin.com/in/aziz-diop-060759209/",
   },

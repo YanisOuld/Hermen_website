@@ -247,6 +247,19 @@ input[type="range"]::-moz-range-thumb {
   transition: all 0.3s ease;
 }
 
+.results-group { margin-bottom: 1.5rem; }
+.results-group-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 0;
+}
+
+
 /* BIG SAVINGS NUMBER */
 .savings-block {
   margin-top: 32px;

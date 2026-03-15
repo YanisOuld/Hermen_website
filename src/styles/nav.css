@@ -129,14 +129,24 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.18s ease, transform 0.18s ease;
-  z-index: 200;
+  z-index: 1200;
   box-shadow: 0 8px 32px rgba(15,17,23,0.06);
   will-change: transform, opacity;
+}
+
+.nav-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  height: 20px;
 }
 
 .nav-dropdown-open {
   opacity: 1;
   pointer-events: auto;
+  z-index: 1400;
   transform: translateX(-50%) translateY(0);
 }
 

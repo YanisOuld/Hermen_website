@@ -24,7 +24,7 @@ export default function GetStartedForm() {
 
     emailjs
       .send(
-        'service_tqso6s6',
+        'service_0znukgc',
         'template_4o6bhhe',
         templateParams,
         'PLSIPnltfGzi9O5b1'
