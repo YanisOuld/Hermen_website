@@ -26,10 +26,10 @@
 .orb-1 {
   width: 900px;
   height: 900px;
-  background: radial-gradient(circle, rgba(210, 100, 20, 0.18) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(210, 100, 20, 0.08) 0%, transparent 70%);
   top: -300px;
   right: -200px;
-  animation: float1 32s ease-in-out infinite;
+  animation: float1 52s ease-in-out infinite;
 }
 
 .orb-2 {
@@ -38,7 +38,7 @@
   background: radial-gradient(circle, rgba(180, 70, 10, 0.14) 0%, transparent 70%);
   bottom: -180px;
   left: -120px;
-  animation: float2 26s ease-in-out infinite;
+  animation: float2 44s ease-in-out infinite;
 }
 
 @keyframes float1 {
@@ -66,15 +66,15 @@
   will-change: transform, opacity;
 }
 
-.rp-1  { left: 72%; top: 18%; animation-duration: 18s; animation-delay:   0s; }
-.rp-2  { left: 20%; top: 65%; animation-duration: 24s; animation-delay:  -5s; }
-.rp-3  { left: 55%; top: 80%; animation-duration: 21s; animation-delay:  -9s; }
-.rp-4  { left: 85%; top: 50%; animation-duration: 27s; animation-delay:  -3s; }
-.rp-5  { left: 35%; top: 25%; animation-duration: 20s; animation-delay: -11s; }
-.rp-6  { left: 10%; top: 40%; animation-duration: 25s; animation-delay:  -7s; }
-.rp-1b { left: 72%; top: 18%; animation-duration: 18s; animation-delay:  -9s; }
-.rp-2b { left: 20%; top: 65%; animation-duration: 24s; animation-delay: -13s; }
-.rp-3b { left: 55%; top: 80%; animation-duration: 21s; animation-delay:  -4s; }
+.rp-1  { left: 72%; top: 18%; animation-duration: 42s; animation-delay:   0s; }
+.rp-2  { left: 20%; top: 65%; animation-duration: 50s; animation-delay:  -8s; }
+.rp-3  { left: 55%; top: 80%; animation-duration: 46s; animation-delay: -12s; }
+.rp-4  { left: 85%; top: 50%; animation-duration: 56s; animation-delay:  -6s; }
+.rp-5  { left: 35%; top: 25%; animation-duration: 44s; animation-delay: -15s; }
+.rp-6  { left: 10%; top: 40%; animation-duration: 52s; animation-delay: -10s; }
+.rp-1b { left: 72%; top: 18%; animation-duration: 42s; animation-delay: -16s; }
+.rp-2b { left: 20%; top: 65%; animation-duration: 50s; animation-delay: -22s; }
+.rp-3b { left: 55%; top: 80%; animation-duration: 46s; animation-delay: -14s; }
 
 @keyframes ripple-expand {
   0%   { width: 0;     height: 0;     opacity: 0;    }
@@ -86,7 +86,7 @@
 /* ─── RESPONSIVE ────────────────────────────────────────────── */
 @media (max-width: 1024px) {
   .ripple {
-    animation-duration: 28s;
+    animation-duration: 58s;
   }
 }
 
